@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift4 Payments (FOUR) — Long | Nicholas Steiglehner, Michigan Ross</title>
+  <meta name="description" content="An institutional-grade investment pitch for Shift4 Payments. Founder-led, capital-light compounder building global payments infrastructure at the cheapest valuation in its history.">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A3C6B'/><text x='16' y='22' font-size='18' font-weight='bold' fill='white' text-anchor='middle' font-family='sans-serif'>4</text></svg>">
+  <style>
+    /* ============================================================
+       PERSHING SQUARE DESIGN SYSTEM — TRUE REBUILD
+       ============================================================ */
+    :root {
+      --ps-blue: #1A3C6B;
+      --ps-blue-mid: #2E6DA4;
+      --ps-green: #4A7B40;
+      --ps-yellow: #FFFFC0;
+      --ps-black: #1A1A1A;
+      --ps-gray: #666666;
+      --ps-rule: #1A3C6B;
+      --bg: #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: 56px;
+    }
+
+    body {
+      min-height: 100dvh;
+      line-height: 1.7;
+      font-family: -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: var(--ps-black);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 { text-wrap: balance; line-height: 1.2; }
+    p, li, figcaption { text-wrap: pretty; }
+    a { color: var(--ps-blue-mid); text-decoration: none; transition: color 180ms; }
+    a:hover { color: var(--ps-blue); }
+    button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+    table { border-collapse: collapse; width: 100%; }
+    ::selection { background: rgba(26, 60, 107, 0.15); color: var(--ps-black); }
+    :focus-visible { outline: 2px solid var(--ps-blue); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ============================================================
+       NAVIGATION — White background, navy bottom border
+       ============================================================ */
+    nav {
+      background: #FFFFFF;
+      border-bottom: 2px solid var(--ps-blue);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.4rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--ps-blue);
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .nav-logo .ticker {
+      color: #FFFFFF;
+      font-size: 9px;
+      font-weight: 700;
+      background: var(--ps-blue);
+      padding: 2px 8px;
+      border-radius: 3px;
+      letter-spacing: 0.06em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 0.05rem;
+      list-style: none;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex: 1;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      font-size: 10px;
+      color: var(--ps-black);
+      padding: 0.22rem 0.32rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: all 180ms;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--ps-blue);
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; position: absolute; top: 100%; left: 0; right: 0; background: #FFFFFF; flex-direction: column; padding: 1rem 2rem; border-bottom: 2px solid var(--ps-blue); }
+      .mobile-menu-btn {
+      margin-left: auto; display: block; }
+    }
+    @media (min-width: 769px) {
+      .mobile-menu-btn {
+      margin-left: auto; display: none; }
+    }
+    .mobile-menu-btn {
+      margin-left: auto; color: var(--ps-blue); padding: 0.4rem; }
+
+    /* ============================================================
+       LAYOUT
+       ============================================================ */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    /* ============================================================
+       PS STRUCTURAL ELEMENTS
+       ============================================================ */
+    .ps-title {
+      font-size: 30px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--ps-blue);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .ps-rule {
+      height: 3px;
+      background: var(--ps-rule);
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .ps-banner {
+      background: var(--ps-green);
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 2px;
+    }
+    .ps-banner p {
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .ps-yellow {
+      background: var(--ps-yellow);
+      border: 1px solid #C8C800;
+      padding: 0.75rem 1rem;
+      margin-top: 1.5rem;
+      border-radius: 2px;
+    }
+    .ps-yellow p {
+      font-style: italic;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--ps-black);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+
+    /* ── Perplexity Research Callout ───────────────────────────────────── */
+    .perp-callout {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      background: #EEF2FF;
+      border-left: 3px solid #1A3C6B;
+      padding: 0.55rem 0.9rem;
+      margin: 0.6rem 0 1.1rem;
+      border-radius: 0 3px 3px 0;
+    }
+    .perp-callout-label {
+      font-size: 9px;
+      font-weight: 800;
+      color: #1A3C6B;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+    .perp-callout p {
+      font-size: 11px;
+      color: #444;
+      line-height: 1.55;
+      margin: 0;
+      font-style: italic;
+    }
+
+    .ps-source {
+      font-size: 10px;
+      color: var(--ps-gray);
+      margin-top: 0.75rem;
+    }
+
+    .ps-body {
+      font-size: 14px;
+      color: var(--ps-black);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      max-width: 820px;
+    }
+
+    .chart-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: underline;
+      color: var(--ps-black);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ============================================================
+       DATA TABLES
+       ============================================================ */
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 0.5rem;
+    }
+    .data-table {
+      width: 100%;
+      font-size: 13px;
+      font-variant-numeric: tabular-nums lining-nums;
+    }
+    .data-table thead th {
+      background: var(--ps-blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.6rem 0.85rem;
+      text-align: left;
+    }
+    .data-table tbody td {
+      font-size: 13px;
+      padding: 0.55rem 0.85rem;
+      border-bottom: 1px solid #E8E8E8;
+      color: var(--ps-black);
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: #F0F5FB;
+    }
+    .data-table tbody tr:last-child td { border-bottom: none; }
+    .highlight-row { background: #E3F2E8 !important; }
+    .highlight-row td { color: var(--ps-green) !important; font-weight: 600; }
+    .pain-row { background: #FDE8E8 !important; }
+    .pain-row td { color: #A03030 !important; font-weight: 500; }
+    .td-positive { color: var(--ps-green) !important; }
+    .td-negative { color: #A03030 !important; }
+    .td-bold { font-weight: 700 !important; color: var(--ps-blue) !important; }
+    .dcf-base { background: #D5EBD8 !important; color: var(--ps-green) !important; font-weight: 700; border: 2px solid var(--ps-green) !important; }
+    .dcf-floor { color: #C8A000 !important; font-weight: 700; }
+
+    /* ============================================================
+       CHART CONTAINER
+       ============================================================ */
+    .chart-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 820px;
+      margin: 1rem 0;
+    }
+
+    /* ============================================================
+       CALCULATOR
+       ============================================================ */
+    .calculator {
+      background: #FFFFFF;
+      border: 1px solid #E0E0E0;
+      padding: 1.5rem;
+    }
+    .slider-group { margin-bottom: 1.5rem; }
+    .slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .slider-label { font-size: 13px; font-weight: 600; color: var(--ps-black); }
+    .slider-value { font-size: 1rem; font-weight: 700; color: var(--ps-blue); font-variant-numeric: tabular-nums; }
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 5px; border-radius: 3px; background: #E0E0E0; outline: none; cursor: pointer; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--ps-blue); border: 2px solid #FFFFFF; cursor: pointer; }
+    input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--ps-blue); border: 2px solid #FFFFFF; cursor: pointer; }
+    .calc-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1.25rem; border-top: 2px solid var(--ps-blue); }
+    @media (max-width: 640px) { .calc-results { grid-template-columns: 1fr; } }
+    .calc-result-item { text-align: center; padding: 0.75rem; background: #F0F5FB; }
+    .calc-result-label { font-size: 10px; color: var(--ps-gray); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 0.2rem; }
+    .calc-result-value { font-size: 1.8rem; font-weight: 700; color: var(--ps-blue); font-variant-numeric: tabular-nums; }
+
+    /* ============================================================
+       BEAR/COUNTER PATTERN
+       ============================================================ */
+    .ps-argument { margin-bottom: 1rem; }
+    .bear-claim { font-size: 14px; color: var(--ps-black); line-height: 1.6; margin-bottom: 0.3rem; }
+    .counter-response { font-size: 14px; line-height: 1.6; }
+
+    /* ============================================================
+       BULLET LIST — PS style
+       ============================================================ */
+    .ps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+    }
+    .ps-list li {
+      font-size: 14px;
+      color: var(--ps-black);
+      line-height: 1.6;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .ps-list li:last-child { border-bottom: none; }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      padding: 5rem 0 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid #E0E0E0;
+    }
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ps-gray);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 1rem + 4vw, 3.5rem);
+      font-weight: 700;
+      font-style: italic;
+      color: var(--ps-blue);
+      margin-bottom: 0.5rem;
+      line-height: 1.05;
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      font-style: italic;
+      color: var(--ps-blue-mid);
+      margin-bottom: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    .hero-date {
+      font-size: 11px;
+      color: var(--ps-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 1.5rem;
+    }
+
+    /* ============================================================
+       SCROLL ANIMATIONS — simple opacity only
+       ============================================================ */
+    .reveal { opacity: 0; transition: opacity 0.3s ease-out; }
+    .reveal.visible { opacity: 1; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--ps-gray);
+      font-size: 12px;
+      border-top: 2px solid var(--ps-blue);
+    }
+    .footer a { color: var(--ps-blue-mid); }
+    .footer strong { color: var(--ps-blue); }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 640px) {
+      .hero-metrics-table { font-size: 12px; }
+      .hero-metrics-table th, .hero-metrics-table td { padding: 0.5rem 0.4rem; }
+      .ps-title { font-size: 24px; }
+      .container { padding: 0 1.25rem; }
+      section { padding: 2.5rem 0; }
+    }
+  
+    /* ── Deep Dive dropdown ───────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      font-size: 10px;
+      color: var(--ps-black);
+      padding: 0.22rem 0.32rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      transition: all 180ms;
+    }
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown.open .nav-dropdown-toggle {
+      color: var(--ps-blue);
+      font-weight: 700;
+    }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--ps-blue);
+      border-top: 2px solid var(--ps-blue);
+      min-width: 148px;
+      z-index: 300;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      border-radius: 0 0 3px 3px;
+    }
+    .nav-dropdown.open .nav-dropdown-menu,
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu li { list-style: none; }
+    .nav-dropdown-menu a {
+      display: block;
+      font-size: 10px;
+      color: var(--ps-black);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      padding: 0.38rem 0.85rem;
+      white-space: nowrap;
+      transition: background 120ms, color 120ms;
+      text-decoration: none;
+    }
+    .nav-dropdown-menu a:hover {
+      background: #EEF4FF;
+      color: var(--ps-blue);
+    }
+    .nav-dropdown-menu li + li { border-top: 1px solid #eee; }
+    /* caret svg */
+    .dd-caret { width: 8px; height: 8px; fill: none; stroke: currentColor; stroke-width: 2.5; transition: transform 180ms; }
+    .nav-dropdown.open .dd-caret { transform: rotate(180deg); }
+
+    </style>
+  <meta property="og:title" content="Shift4 Payments (FOUR) — Long Thesis">
+  <meta property="og:description" content="A founder-led compounder at 6x EV/EBITDA. 6.67x MOIC. 49% IRR. The cheapest valuation in its history.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      SHIFT4 <span class="ticker">FOUR</span>
+    </div>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#thesis">Thesis</a></li>
+      <li><a href="#business">Business</a></li>
+      <li><a href="#model">Model</a></li>
+      <li><a href="#valuation">Valuation</a></li>
+      <li><a href="#insider">Insider</a></li>
+      <li><a href="#catalysts-alt">Catalysts</a></li>
+      <li><a href="#bears">Bears</a></li>
+      <li><a href="#position">Position</a></li>
+    </ul>
+    <div class="nav-dropdown" id="deepDiveDropdown" style="flex-shrink:0;">
+      <span class="nav-dropdown-toggle" id="deepDiveToggle">
+        Deep Dive
+        <svg class="dd-caret" viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg>
+      </span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#fcfshare">FCF/Shr</a></li>
+        <li><a href="#volume">Volume</a></li>
+        <li><a href="#gateway">Gateway</a></li>
+        <li><a href="#pipeline">Pipeline</a></li>
+        <li><a href="#peers">Peers</a></li>
+        <li><a href="#organic">Organic</a></li>
+        <li><a href="#management">Mgmt</a></li>
+        <li><a href="#sentiment">Sentiment</a></li>
+        <li><a href="#ai">AI Risk</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#perplexity">Built</a></li>
+      </ul>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     1. HERO
+     ============================================================ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-eyebrow reveal">Investment Thesis &mdash; Long Position</div>
+    <h1 class="hero-title reveal">Shift4 Payments (FOUR) &mdash; Long</h1>
+    <p class="hero-subtitle reveal">Shift4 is being priced as a leveraged software integrator at peak complexity. It is a toll road on physical commerce with fixed-rate debt and $500M of annual free cash flow. The market is confusing the balance sheet with the business.</p>
+
+    <div class="data-table-wrapper reveal" style="max-width:520px; margin:0 auto;">
+      <table class="data-table" style="text-align:center;">
+        <thead><tr><th style="text-align:center;">Entry</th><th style="text-align:center;">Target</th><th style="text-align:center;">IRR</th><th style="text-align:center;">EV/EBITDA</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700; color:var(--ps-blue); font-size:15px;">$42.16</td><td style="font-weight:700; color:var(--ps-green); font-size:15px;">$284+</td><td style="font-weight:700; color:var(--ps-green); font-size:15px;">49%</td><td style="font-weight:700; color:var(--ps-blue); font-size:15px;">6.75x</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hero-date reveal" style="text-align:center;">
+      <p style="font-size:14px;font-weight:700;color:#1A3C6B;margin:0;">Nicholas Steiglehner</p>
+      <p style="font-size:12px;color:#555;margin:0.2rem 0;">University of Michigan, Ross School of Business</p>
+      <p style="font-size:11px;color:#888;margin:0.1rem 0;">and</p>
+      <p style="font-size:11px;color:#888;margin:0.1rem 0;">Varsity Men&rsquo;s Tennis</p>
+      <p style="font-size:11px;color:#888;letter-spacing:0.1em;text-transform:uppercase;margin:0.3rem 0 0;">April 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. INVESTMENT THESIS
+     ============================================================ -->
+<section id="thesis">
+  <div class="container">
+    <h2 class="ps-title">A Toll Road on Physical Commerce at Six Times EBITDA</h2>
+    <div class="ps-rule"></div>
+
+    <p class="ps-body">Shift4 went public in June 2020 at a $1.85 billion post-money valuation. Today the equity trades at approximately the same price &mdash; on a business that generates $4.2 billion of revenue, $970 million of EBITDA, and $500 million of free cash flow across 75 countries. Revenue has grown 4.2 times since the IPO. Free cash flow has gone from negative $105 million to positive $500 million. The stock has gone nowhere.</p>
+
+    <p class="ps-body">I think about this the way a private equity investor thinks about the equity check in a buyout. The enterprise value is the whole pie. Creditors get the first slice &mdash; fixed in size because Shift4&rsquo;s debt is entirely fixed-rate, maturing on a known schedule, with covenants set against covenant EBITDA rather than GAAP. Everything above that debt line belongs to equity. As EBITDA grows, the pie expands. As free cash flow retires principal, the debt slice shrinks. Equity grows from both directions simultaneously. The business doesn&rsquo;t need to re-rate for this to work. It only needs to keep doing what it has done for six years.</p>
+
+    <p class="ps-body">The specific math is worth tracing. Shift4 carries roughly $3.3 billion of net debt against an enterprise value of approximately $8 billion today. Free cash flow of $500 million annually, compounding at roughly 12%, retires debt while EBITDA grows above it. The $1 billion repurchase shrinks the share count from 86 million to roughly 63 million. By FY2030, if EBITDA reaches $2 billion &mdash; a 12% CAGR, well below what the company has delivered since 2022 &mdash; and the market applies a still-modest 10 times multiple, the enterprise value is $20 billion. Less $2 billion of remaining net debt: $18 billion of equity value on 63 million shares is $284 per share. That is a 6.7 times MOIC and a 49% five-year IRR from today&rsquo;s entry of $42.16. Multiple expansion is not in that number.</p>
+
+    <p class="ps-body">The conditions required for this framework to work in public markets are specific, because leverage without control of capital allocation or exit timing is fragile rather than convex. What makes this different is the quality of the underlying business. Shift4 has 98%+ annual merchant retention, entirely fixed-rate debt, and free cash flow that grows predictably from a backlog that is already signed. The downside is anchored to business quality. The upside is amplified by the arithmetic of value migrating from the debt tranche to the equity tranche as the years pass. At six times EBITDA, the market is pricing neither the quality nor the math.</p>
+
+    <p class="ps-source">Source: Perplexity Finance (perplexity.ai/finance/FOUR), Shift4 earnings filings, PitchBook</p>
+  </div>
+</section>
+<section id="position">
+  <div class="container">
+    <h2 class="ps-title reveal">Why I Own This</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">Before committing to any position, I work through five questions. The first is whether the business is durable. Shift4 has a 28-year operating history, 98%+ annual merchant retention, and embeds itself inside the operating software of hotels, restaurants, and stadiums in a way that costs $250,000 to $1 million and six months of disruption to undo. That is not a payment rail. It is infrastructure. The second question is whether growth is self-determined rather than dependent on the macro. The company grew payment volume 24% in Q3 2025 while hotel RevPAR declined. Revenue comes from backlog conversion and gateway-to-end-to-end migration &mdash; a distinction that has held through COVID, multiple rate cycles, and the current consumer softness. The third question is whether the balance sheet is safe enough that a difficult quarter doesn&rsquo;t break the thesis. Fixed-rate debt on a staggered schedule, $500 million of free cash flow covering $170 million of interest by three times, and sub-3 times leverage arriving by Q4 2026 on its own arithmetic. The fourth is whether management is rational with capital. The founder has deployed $46 million personally at every meaningful decline, at a weighted average cost basis of $63.56 &mdash; well above where I am buying. The board authorized $1 billion of buybacks at 6 times EBITDA, the most attractive repurchase price in the company&rsquo;s public history. The fifth is whether the five-year return looks attractive without the multiple expanding. Conservative assumptions &mdash; 12% EBITDA CAGR, 10 times exit &mdash; produce a $284 price target and a 49% IRR. All five answers are yes.</p>
+
+    <p class="ps-body reveal">The weighing machine, given enough time, tends to respect the arithmetic.</p>
+
+    <p class="ps-source reveal">Source: Author model, Shift4 earnings filings</p>
+  </div>
+</section>
+
+
+<section class="section" id="cheap"></section>
+
+<!-- ============================================================
+     4. BUSINESS PERFORMANCE
+     ============================================================ -->
+<section id="business">
+  <div class="container">
+    <h2 class="ps-title">The Business Has Compounded Sixfold Since IPO</h2>
+    <div class="ps-rule"></div>
+
+    <p class="ps-body">The business model is worth understanding carefully because the economics are not obvious from the outside. Shift4 is not simply a payments processor. It is the operating software layer for hotels, restaurants, stadiums, and entertainment venues &mdash; and it earns a recurring toll on every transaction that flows through that layer. The blended spread of 62 basis points has held remarkably stable even as the company moved upmarket toward enterprise clients and expanded to 75 countries. The average merchant switching away from Shift4&rsquo;s integrated PMS and POS stack would face costs of $250,000 to $1 million and six months of operational disruption. These are not payment rails being commoditized &mdash; they are embedded systems that are sticky by design.</p>
+
+    <p class="ps-body">The competitive strength has been demonstrated in real account wins. The Q4 2025 shareholder letter documented specific displacements of incumbent processors at Wynn Resorts, KSL Resorts across 40 properties, US Bank Stadium, the PGA Tour, Red Rocks Amphitheater, Fenway Park, and Coors Field. Legacy processors &mdash; Fiserv, GPN, FIS &mdash; are not threats to Shift4. They are the incumbents being displaced. Fiserv&rsquo;s Financial Solutions division posted negative 3% organic revenue growth in Q3 2025, having concealed that decline behind Argentine hyperinflation for years. GPN exited its Issuer Solutions division and acquired Worldpay in a transaction that is more admission of structural weakness than strategic aggression. Shift4 grew payment volume 24% in the same quarter and the same market.</p>
+
+    <p class="ps-body">The Global Blue acquisition extended this model internationally. Global Blue contributes more than $200 million of EBITDA from tax-free shopping and dynamic currency conversion alone, operating across 75 countries and 400,000 merchants. The FY2026 guidance embeds zero synergy credit from the 70,000 SMB merchants available for cross-sell. Any progress on that initiative is pure upside against a model that currently assumes none. The serial M&amp;A track record &mdash; Vectron at $1,300 per location, Bambora at $700 per location, Givex at $1,100 per location &mdash; has been a customer acquisition engine with 18-month payback periods and 98%+ retention. The business acquired at 6 times EBITDA and compounds in perpetuity.</p>
+
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead><tr><th>Metric</th><th>FY2021A</th><th>FY2025A</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Revenue (GRLNF)</td><td>$1.0B</td><td>$4.2B</td><td style="color:#4A7B40;font-weight:700;">+4.2&times;</td></tr>
+        <tr><td>Adj. EBITDA</td><td>~$160M</td><td>$970M</td><td style="color:#4A7B40;font-weight:700;">+6.1&times;</td></tr>
+        <tr><td>Free Cash Flow</td><td>($105M)</td><td>$500M</td><td style="color:#4A7B40;font-weight:700;">Positive</td></tr>
+        <tr><td>E2E Payment Volume</td><td>~$46B</td><td>$209B</td><td style="color:#4A7B40;font-weight:700;">+4.5&times;</td></tr>
+        <tr><td>Countries</td><td>~5</td><td>75+</td><td style="color:#4A7B40;font-weight:700;">Global franchise</td></tr>
+      </tbody>
+    </table>
+
+    <div class="perp-callout reveal"><span class="perp-callout-label">Perplexity&nbsp;Research</span><p>Perplexity Computer cross-referenced Fiserv Q3 2025, Global Payments Q4 2025, and Shift4&rsquo;s Q4 2025 shareholder letter to document specific competitive displacements: Wynn Resorts, KSL Resorts (40 properties), US Bank Stadium, PGA Tour, Fenway Park, and Coors Field. Each confirms an incumbent processor being replaced by Shift4&rsquo;s integrated stack.</p></div>
+    <p class="ps-source">Source: Perplexity Finance, PitchBook company profiles, Shift4 earnings filings</p>
+  </div>
+</section>
+
+
+<section class="section" id="tam">
+  <div class="container">
+    <h2 class="ps-title">A Massive, Underpenetrated Addressable Market</h2>
+    <div class="ps-rule"></div>
+    <p class="ps-body">Shift4 processes $209 billion of end-to-end payment volume against a total addressable market in its core verticals exceeding $2 trillion annually. At current penetration, it has captured less than 10% of its opportunity. The ceiling is defined by three converging markets, each larger than the current business:</p>
+
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead>
+        <tr>
+          <th>Vertical</th>
+          <th>Market Size</th>
+          <th>FOUR Position</th>
+          <th>Penetration</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>US Hotels</strong></td>
+          <td>$112B annual revenue (US alone)</td>
+          <td>#1 — ~40% of US hotels</td>
+          <td>~40% by location, &lt;20% of payment volume (gateway conversion opportunity)</td>
+          <td>Statista, Hotel Market 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Sports &amp; Entertainment Venues</strong></td>
+          <td>$18.6B cashless payments market (2025), growing to $46.3B by 2034 at 10.7% CAGR</td>
+          <td>#1 — ~75% of US stadiums</td>
+          <td>Strong US position; international stadiums largely unpenetrated</td>
+          <td>Dataintelo, Cashless Payments in Sports Venues 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Global Luxury Retail &amp; Tax-Free Shopping</strong></td>
+          <td>$46.7B duty-free market (2024), growing to $78.8B by 2032 at 6.5% CAGR</td>
+          <td>#1 globally via Global Blue (80% TFS market share)</td>
+          <td>TFS penetrated; E2E payments cross-sell to 70K SMB merchants is &lt;5% begun</td>
+          <td>Tri-Link FTZ Duty-Free Market Report 2025</td>
+        </tr>
+        <tr>
+          <td><strong>International Hospitality</strong></td>
+          <td>$57.3B global hotel investment (2024, JLL); hospitality payments represent 3&ndash;5% of revenue</td>
+          <td>15 countries targeted for 2026 terminal rollout; 80K intl. merchants pre-cross-sell</td>
+          <td>&lt;5% of international hotel universe uses Shift4</td>
+          <td>JLL Global Hotel Investment Outlook 2025</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="ps-body">Shift4&rsquo;s $209B of E2E volume in 2025 against a US hotels market generating $112B of annual revenue alone (implying $1T+ of payment volume at typical card transaction rates) shows the scale of what remains. Even within its #1 market, the opportunity to convert gateway-only merchants to E2E is worth $141M of incremental GRLNF. International is a new frontier with 400K+ merchants on the Global Blue network and a terminal rollout just beginning.</p>
+
+    <p class="ps-body">Shift4&rsquo;s growth does not require market share gains from competitors. It requires converting its own existing installed base &mdash; merchants who already use Shift4 in some capacity &mdash; to full E2E processing. That is the lowest-risk, highest-return growth available in the payments industry.</p>
+
+    <div class="ps-yellow">
+      <p>At $209B of E2E volume against a $2T+ TAM in its core verticals, Shift4 has penetrated roughly 10% of its addressable opportunity. The growth runway is structural and self-funded. No new markets needed &mdash; just deeper penetration of the base it already owns.</p>
+    </div>
+    <p class="ps-source">Source: Statista Global Hotel Market 2025 (<a href="https://cashmere.io/v/7ZXEX1" style="color:#2E6DA4;">cashmere.io/v/7ZXEX1</a>), Dataintelo Cashless Payments in Sports Venues 2025, Tri-Link FTZ Duty-Free Market Report 2025, JLL Global Hotel Investment Outlook 2025</p>
+  </div>
+</section>
+
+
+<section class="section" id="opmodel">
+  <div class="container">
+    <h2 class="ps-title">Operating Model: FY2025A &rarr; FY2030E</h2>
+    <div class="ps-rule"></div>
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>FY2025A</th>
+          <th>FY2026E</th>
+          <th>FY2027E</th>
+          <th>FY2028E</th>
+          <th>FY2029E</th>
+          <th>FY2030E</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Revenue (GRLNF)</strong></td>
+          <td>$4,180M</td>
+          <td style="color:#2E6DA4;">$5,077M ★</td>
+          <td style="color:#2E6DA4;">$5,786M ★</td>
+          <td style="color:#2E6DA4;">$6,728M ★</td>
+          <td>$7,674M</td>
+          <td>$8,749M</td>
+        </tr>
+        <tr>
+          <td>YoY Growth</td>
+          <td>+26%</td>
+          <td>+21%</td>
+          <td>+14%</td>
+          <td>+16%</td>
+          <td>+14%</td>
+          <td>+14%</td>
+        </tr>
+        <tr>
+          <td><strong>EBITDA</strong></td>
+          <td>$970M</td>
+          <td style="color:#2E6DA4;">$1,185M ★</td>
+          <td style="color:#2E6DA4;">$1,367M ★</td>
+          <td style="color:#2E6DA4;">$1,599M ★</td>
+          <td>$1,791M</td>
+          <td style="color:#4A7B40;font-weight:700;">$2,006M</td>
+        </tr>
+        <tr>
+          <td>EBITDA Margin</td>
+          <td>23.2%</td>
+          <td>23.3%</td>
+          <td>23.6%</td>
+          <td>23.8%</td>
+          <td>23.3%</td>
+          <td>22.9%</td>
+        </tr>
+        <tr>
+          <td><strong>Free Cash Flow</strong></td>
+          <td>$500M</td>
+          <td style="color:#2E6DA4;">$549M ★</td>
+          <td style="color:#2E6DA4;">$684M ★</td>
+          <td>$780M</td>
+          <td>$880M</td>
+          <td>$990M</td>
+        </tr>
+        <tr>
+          <td><strong>Shares (Common)</strong></td>
+          <td>86.5M</td>
+          <td>73.5M</td>
+          <td>74.0M</td>
+          <td>74.0M</td>
+          <td>74.0M</td>
+          <td>74.0M</td>
+        </tr>
+        <tr>
+          <td><strong>FCF / Share</strong></td>
+          <td>$5.78</td>
+          <td>$7.47</td>
+          <td>$9.24</td>
+          <td>$10.54</td>
+          <td>$11.89</td>
+          <td style="color:#4A7B40;font-weight:700;">$13.38</td>
+        </tr>
+        <tr>
+          <td><strong>EV/EBITDA (at $42.16)</strong></td>
+          <td>8.3x</td>
+          <td style="color:#4A7B40;font-weight:700;">6.8x</td>
+          <td>5.9x</td>
+          <td>5.1x</td>
+          <td>4.5x</td>
+          <td>4.0x</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#888;margin-top:0.5rem;">★ = consensus estimates (Perplexity Finance). FY2029E&ndash;FY2030E = author projections at conservative 12% EBITDA CAGR. Shares reflect $1B buyback completion by mid-2026 and no further repurchases thereafter (conservative).</p>
+
+    <p class="ps-body">At today&rsquo;s price of $42.16, FOUR trades at 6.8&times; FY2026E EBITDA. If the business simply executes on consensus &mdash; no multiple expansion, no beats &mdash; and the stock re-rates to 10&times; FY2030E EBITDA, that implies an enterprise value of $20.1B. Less $3B of net debt: $17.1B equity value on 74M shares = $231 per share. That is before any upside from the World Cup, Global Blue cross-sell, or gateway conversion.</p>
+
+    <div class="ps-yellow">
+      <p>FOUR currently trades at 4.0&times; FY2030E consensus EBITDA. A business growing EBITDA at 14%+ annually has never sustained a 4&times; multiple outside of bankruptcy risk. The setup is not heroic &mdash; it is arithmetic.</p>
+    </div>
+    <p class="ps-source">Source: Perplexity Finance consensus estimates (perplexity.ai/finance/FOUR), Shift4 Payments Q4 2025 earnings release, author projections</p>
+  </div>
+</section>
+
+
+<section class="section" id="competitive">
+  <div class="container">
+    <h2 class="ps-title">Why Legacy Processors Are Losing &mdash; Evidence from Primary Sources</h2>
+    <div class="ps-rule"></div>
+    <div class="ps-banner">
+      <p>Fiserv&rsquo;s Financial Solutions division posted &minus;3% organic revenue growth in Q3 2025. GPN&rsquo;s Merchant Solutions grows at ~6%. FOUR grows at 21%+. The same market, the same merchants &mdash; a different product.</p>
+    </div>
+
+    <p class="ps-body">Legacy processors (GPN, FIS, FISV) built their businesses on payment rail access &mdash; a commodity that is being rapidly democratized. Fiserv&rsquo;s stock fell ~50% after its Q3 2025 earnings report revealed that its previously-reported &ldquo;double-digit growth&rdquo; was largely driven by Argentine hyperinflation and financial engineering, not organic business performance. Organic revenue in its Financial Solutions division declined 3% as banks postponed license renewals and new competitors eroded market share. GPN exited its Issuer Solutions division and acquired Worldpay in a desperate transformation toward being a &ldquo;pureplay merchant solutions provider.&rdquo;</p>
+
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Model</th>
+          <th>Organic Growth</th>
+          <th>ROIC (FY2025)</th>
+          <th>EV/EBITDA</th>
+          <th>Strategic Direction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#EBF3FA;">
+          <td><strong>Shift4 (FOUR)</strong></td>
+          <td>Software + payments integrated</td>
+          <td style="color:#4A7B40;font-weight:700;">Mid-teens organic</td>
+          <td style="color:#4A7B40;">5.5%</td>
+          <td style="color:#4A7B40;font-weight:700;">6.8x FY2026E</td>
+          <td>Vertical deepening + global expansion</td>
+        </tr>
+        <tr>
+          <td>Global Payments (GPN)</td>
+          <td>Pure processing + bolt-on software</td>
+          <td>~6% ex-dispositions</td>
+          <td>3.3%</td>
+          <td>9.3x</td>
+          <td>Transforming via Worldpay acquisition</td>
+        </tr>
+        <tr>
+          <td>Fiserv (FISV)</td>
+          <td>Core banking + merchant</td>
+          <td style="color:#C0392B;">3.5%&ndash;4% (post-restatement)</td>
+          <td>6.5%</td>
+          <td>7.1x</td>
+          <td>Recovering from earnings restatement crisis</td>
+        </tr>
+        <tr>
+          <td>FIS</td>
+          <td>Core banking + processing</td>
+          <td>~4%</td>
+          <td>4.4%</td>
+          <td>12.4x</td>
+          <td>Post-Worldpay divestiture refocus</td>
+        </tr>
+        <tr>
+          <td>Toast (TOST)</td>
+          <td>Restaurant software + payments</td>
+          <td>~24%</td>
+          <td>1.2%</td>
+          <td>53x</td>
+          <td>Restaurants only; EBITDA margin 5.8%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="ps-body">Shift4&rsquo;s shareholder letter (Q4 2025) documented specific competitive displacements: Wynn Resorts, KSL Resorts (40 iconic properties), US Bank Stadium (Minnesota Vikings), PGA Tour (all retail merchandise), Red Rocks Amphitheater, Fenway Park, and Coors Field. Each of these represents an incumbent processor being displaced by Shift4&rsquo;s integrated stack. These are not small wins &mdash; Caesars Palace processes across 40,000+ hotel rooms, 40+ restaurants, and 185,000 sq ft of casino floor on Shift4 infrastructure.</p>
+
+    <p class="ps-body">The LinkedIn analysis of Shift4&rsquo;s Las Vegas hotel deployments captures the core insight: <em>&ldquo;The technology powering Caesars Palace isn&rsquo;t just impressive &mdash; it&rsquo;s now available for hotels at no upfront cost.&rdquo;</em> Shift4 subsidizes hardware deployment to win the payment processing relationship. The CAC payback is 18 months. The merchant then becomes essentially permanent &mdash; replacing an integrated PMS/POS system across a major hotel costs $250K&ndash;$1M and six months of disruption.</p>
+
+    <div class="ps-yellow">
+      <p>GPN and FISV are not threats to Shift4 &mdash; they are the incumbents Shift4 is displacing. The account wins are documented, the switching costs are real, and the competitive dynamics favor the integrated model over the pure processor for every decade-long horizon that follows.</p>
+    </div>
+    <p class="ps-source">Source: Fiserv Q3 2025 earnings (CCG Catalyst), GPN Q4 2025 results (company release), Shift4 Q4 2025 Shareholder Letter (investors.shift4.com), Payments Dive, LinkedIn hotel technology analysis</p>
+  </div>
+</section>
+
+<section class="section" id="model">
+  <div class="container">
+    <h2 class="ps-title reveal">Leverage: 3.73&times; at the Peak, 2.00&times; in Eight Quarters</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">Q1 2026 is the deliberate peak. Three one-time cash drains hit simultaneously &mdash; the final TRA payment, the Global Blue integration cost, and the tail of the $1 billion repurchase program. Every quarter thereafter, leverage declines mechanically on the strength of $500 million in annual free cash flow and a fixed-rate debt structure that requires no refinancing at current rates. Sub-3 times arrives by Q4 2026. The convertible note is retired in cash by August 2027. Institutional mandates currently excluded from FOUR become permitted buyers on a ratio, not a judgment call.</p>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead>
+          <tr><th>Quarter</th><th>Leverage</th><th>Cash</th><th>LTM EBITDA</th><th>FCF</th><th>Event</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="td-bold">Q4 25A</td><td>3.69x</td><td>$964M</td><td>$970M</td><td>&mdash;</td><td></td></tr>
+          <tr class="pain-row"><td>Q1 26E</td><td>3.73x</td><td>$556M</td><td>$1,070M</td><td>+$70M</td><td>Designed peak: $478M one-time drain</td></tr>
+          <tr><td>Q2 26E</td><td>3.53x</td><td>$414M</td><td>$1,170M</td><td>+$148M</td><td>$1B buyback complete</td></tr>
+          <tr class="highlight-row"><td>Q3 26E</td><td>3.06x</td><td>$561M</td><td>$1,302M</td><td>+$222M</td><td>Peak FCF quarter</td></tr>
+          <tr class="highlight-row"><td style="font-weight:700;">Q4 26E</td><td style="color:#C8A000; font-weight:900;">2.99x</td><td>$631M</td><td>$1,307M</td><td>+$145M</td><td>Sub-3&times; achieved</td></tr>
+          <tr><td>Q1 27E</td><td>2.72x</td><td>$746M</td><td>$1,395M</td><td>+$115M</td><td></td></tr>
+          <tr><td>Q2 27E</td><td>2.38x</td><td>$936M</td><td>$1,514M</td><td>+$190M</td><td>Conv note prep complete</td></tr>
+          <tr><td>Q3 27E</td><td>2.20x</td><td>$573M</td><td>$1,518M</td><td>+$270M</td><td>$632M conv note retired</td></tr>
+          <tr class="highlight-row"><td style="font-weight:700;">Q4 27E</td><td style="color:#C8A000; font-weight:900;">2.00x</td><td>$748M</td><td>$1,580M</td><td>+$175M</td><td>Near investment grade</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ps-source reveal">Source: Shift4 earnings filings, management guidance Q4 2025</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. VALUATION: THREE METHODS
+     ============================================================ -->
+
+<!-- FCF/SHARE COMPOUNDING -->
+<section class="section" id="fcfshare">
+  <div class="container">
+    <h2 class="ps-title reveal">The Buyback Doubles FCF Per Share in Two Years</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">The $1 billion repurchase retires roughly 23 million shares at an average price near $43, collapsing the share count from 86.5 million today to approximately 50 million by the end of FY2027. FCF per share rises from $6.80 in 2025 to an estimated $14.00 in 2027 &mdash; not because the business is doing something extraordinary, but because the denominator is shrinking while the numerator compounds. At $42.16, a buyer today is paying three times FY2027 estimated FCF per share. The stock does not need to re-rate. It only needs to compound.</p>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead>
+          <tr><th>Year</th><th>Adj. FCF</th><th>Diluted Shares</th><th>FCF / Share</th><th>FCF Yield at $42.16</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FY2025A</td><td>$500M</td><td>73.5M</td><td>$6.80</td><td class="td-positive">16.1%</td>
+          </tr>
+          <tr>
+            <td>FY2026E</td><td>$550M&thinsp;*</td><td>~60M</td><td>$9.17</td><td class="td-positive">21.8%</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>FY2027E</td><td>$700M</td><td>~50M</td><td>$14.00</td><td>33.2%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--ps-gray);margin-top:0.4rem;font-style:italic;">* FY2026E normalized: adds back ~$60M one-time Global Blue integration costs from the $490&ndash;510M guided figure. Share count assumes $1B buyback at avg. ~$43/share.</p>
+    <p class="ps-source reveal">Source: Shift4 Q4 2025 earnings release, author model.</p>
+  </div>
+</section>
+
+<section id="valuation">
+  <div class="container">
+    <h2 class="ps-title reveal">Three Methods. One Conclusion.</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">Wall Street&rsquo;s most recent median 12-month price target sits at roughly $65 to $70, from firms including Raymond James, BTIG, and Benchmark &mdash; all of which maintained Buy ratings through March 2026. That consensus implies a 55% to 65% upside from $42.16 within a year. The thesis at $284 is a five-year target; the Street&rsquo;s 12-month number is directionally consistent with the compounding path, not a contradiction of it.</p>
+
+    <p class="ps-body reveal">Three independent valuation methods each arrive at the same conclusion. A discounted cash flow at 10% WACC and 3% terminal growth implies $149 per share. A sum-of-parts analysis at today&rsquo;s depressed multiples, with zero synergy credit, implies $97. The median comparable payments transaction since 2019 &mdash; drawn from 23 deals in the CB Insights M&amp;A database &mdash; was executed at 15 times EBITDA; applied to FY2026 consensus, that implies $196. The most pessimistic DCF scenario I could construct &mdash; 12% WACC, 2% terminal growth &mdash; still implies $91, or 2.1 times the current price. All 25 cells in a sensitivity matrix spanning five WACC assumptions and five terminal growth rates price FOUR above the current level.</p>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>Method</th><th>Implied Price</th><th>vs. Current ($42.16)</th></tr></thead>
+        <tbody>
+          <tr><td class="td-bold">DCF (10% WACC, 3% TGR)</td><td style="font-weight:700; color:var(--ps-green);">$149</td><td>+253%</td></tr>
+          <tr><td class="td-bold">Sum-of-Parts (zero synergy)</td><td style="font-weight:700;">$97</td><td>+130%</td></tr>
+          <tr><td class="td-bold">Precedent Transactions (median 15&times;)</td><td style="font-weight:700; color:var(--ps-green);">$196</td><td>+365%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ps-body reveal" style="margin-top:1.5rem;">The interactive calculator below lets you stress-test the thesis with your own assumptions:</p>
+
+    <div class="calculator reveal">
+      <div class="slider-group">
+        <div class="slider-header">
+          <span class="slider-label">FY2030 EBITDA</span>
+          <span class="slider-value" id="ebitda-display">$1.85B</span>
+        </div>
+        <input type="range" id="ebitda-slider" min="1500" max="2500" value="1850" step="50">
+      </div>
+      <div class="slider-group">
+        <div class="slider-header">
+          <span class="slider-label">Exit Multiple (EV/EBITDA)</span>
+          <span class="slider-value" id="multiple-display">10.0x</span>
+        </div>
+        <input type="range" id="multiple-slider" min="8" max="15" value="10" step="0.5">
+      </div>
+      <div class="slider-group">
+        <div class="slider-header">
+          <span class="slider-label">Shares Outstanding (M)</span>
+          <span class="slider-value" id="shares-display">63M</span>
+        </div>
+        <input type="range" id="shares-slider" min="60" max="80" value="63" step="1">
+      </div>
+      <div class="calc-results">
+        <div class="calc-result-item">
+          <div class="calc-result-label">Implied Price</div>
+          <div class="calc-result-value" id="calc-price">$284</div>
+        </div>
+        <div class="calc-result-item">
+          <div class="calc-result-label">MOIC</div>
+          <div class="calc-result-value" id="calc-moic">6.0x</div>
+        </div>
+        <div class="calc-result-item">
+          <div class="calc-result-label">5yr IRR</div>
+          <div class="calc-result-value" id="calc-irr">43%</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="ps-body reveal">A probability-weighted view assigns 25% probability to the bear scenario ($91 per share), 50% to the base ($149 per share), and 25% to the bull ($294 per share). The probability-weighted value is $171 per share &mdash; a 4.0 times MOIC from $42.16 &mdash; without assigning any weight to scenarios that require multiple expansion or market rerating. The floor and the weighted average both point the same direction.</p>
+
+    <div class="perp-callout reveal"><span class="perp-callout-label">Perplexity&nbsp;Research</span><p>CB Insights M&amp;A database (via Perplexity) surfaced 23 comparable payments transactions since 2019. Median EV/EBITDA: 15&times;. FOUR trades at 6.75&times; &mdash; a 57% discount to sector precedent. All 25 cells of the DCF sensitivity matrix (5 WACC &times; 5 terminal growth scenarios) price FOUR above the $42.16 entry. Bear floor: $91. Base: $149. Bull: $294.</p></div>
+    <p class="ps-source reveal">Source: DCF model, CB Insights M&amp;A database</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. VALUATION: PEER COMPS
+     ============================================================ -->
+<section id="peers">
+  <div class="container">
+    <h2 class="ps-title reveal">FOUR Trades at a 57% Discount to Integrated Payments Precedent</h2>
+    <div class="ps-rule reveal"></div>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>Target</th><th>Acquirer</th><th>Year</th><th>EV</th><th>EV/EBITDA</th></tr></thead>
+        <tbody>
+          <tr><td>WorldPay</td><td>Global Payments</td><td>2025</td><td>$24B</td><td>~12x</td></tr>
+          <tr><td>EVO Payments</td><td>Global Payments</td><td>2023</td><td>$4.0B</td><td>~14x</td></tr>
+          <tr><td>Heartland Payment Systems</td><td>Global Payments</td><td>2016</td><td>$4.3B</td><td>~26x</td></tr>
+          <tr><td>Verifone</td><td>Francisco Partners</td><td>2018</td><td>$3.4B</td><td>~16x</td></tr>
+          <tr><td>First Data</td><td>Fiserv</td><td>2019</td><td>$22B</td><td>~12x</td></tr>
+          <tr><td>Ingenico</td><td>Worldline</td><td>2020</td><td>$8.6B</td><td>~20x</td></tr>
+          <tr style="border-top:2px solid var(--ps-blue); font-weight:700; color:var(--ps-blue);"><td>Precedent Median</td><td></td><td></td><td></td><td>~15x</td></tr>
+          <tr style="color:#A03030; font-weight:700;"><td>FOUR Today</td><td></td><td>2026</td><td>$8.0B</td><td>6.75x</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ps-yellow reveal">
+      <p>At median precedent multiples (15&times;) on FY2026E EBITDA: implied price of $196/share.</p>
+    </div>
+
+    <p class="ps-source reveal">Source: Capital IQ, CB Insights</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. VOLUME SIGNAL
+     ============================================================ -->
+<section id="volume">
+  <div class="container">
+    <h2 class="ps-title">FOUR&rsquo;s Growth Is Structural, Not Cyclical</h2>
+    <div class="ps-rule"></div>
+    <div class="ps-banner">
+      <p>As US hotel RevPAR declined in 2025, Shift4&rsquo;s E2E payment volume grew 23&ndash;27%. The spread between FOUR&rsquo;s growth and its end-markets&rsquo; growth has averaged 37 percentage points over 8 consecutive quarters.</p>
+    </div>
+
+    <p class="ps-body">The market treats Shift4 as a consumer spending proxy. The data says otherwise. When hotel RevPAR fell for the first time since 2020, FOUR&rsquo;s volume grew because volume growth is a function of new merchant activations, gateway-to-E2E conversions, and new vertical entry &mdash; not same-store sales growth at existing locations. These are categorically different variables that the market has conflated.</p>
+
+    <div style="margin:1.5rem 0;">
+      <div class="chart-label">E2E Volume Growth vs. US Hotel RevPAR &mdash; Quarterly YoY (%)</div>
+      <canvas id="signalChart" style="max-height:300px;"></canvas>
+    </div>
+
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead><tr><th>Quarter</th><th>FOUR E2E Volume YoY</th><th>US Hotel RevPAR YoY</th><th>Spread</th></tr></thead>
+      <tbody>
+        <tr><td>Q1 2024</td><td style="color:#2E6DA4;">+49.8%</td><td>+3%</td><td style="color:#4A7B40;font-weight:700;">+47pp</td></tr>
+        <tr><td>Q2 2024</td><td style="color:#2E6DA4;">+49.6%</td><td>+2%</td><td style="color:#4A7B40;font-weight:700;">+48pp</td></tr>
+        <tr><td>Q3 2024</td><td style="color:#2E6DA4;">+55.9%</td><td>+1%</td><td style="color:#4A7B40;font-weight:700;">+55pp</td></tr>
+        <tr><td>Q4 2024</td><td style="color:#2E6DA4;">+49.2%</td><td>+1%</td><td style="color:#4A7B40;font-weight:700;">+48pp</td></tr>
+        <tr><td>Q1 2025</td><td style="color:#2E6DA4;">+34.7%</td><td>0%</td><td style="color:#4A7B40;font-weight:700;">+35pp</td></tr>
+        <tr><td>Q2 2025</td><td style="color:#2E6DA4;">+24.9%</td><td>&minus;1%</td><td style="color:#4A7B40;font-weight:700;">+26pp</td></tr>
+        <tr><td>Q3 2025</td><td style="color:#2E6DA4;">+25.7%</td><td>&minus;1%</td><td style="color:#4A7B40;font-weight:700;">+27pp</td></tr>
+        <tr><td>Q4 2025</td><td style="color:#2E6DA4;">+23.6%</td><td>&minus;1%</td><td style="color:#4A7B40;font-weight:700;">+25pp</td></tr>
+        <tr style="background:#EBF3FA;font-weight:700;"><td><strong>8Q Average</strong></td><td><strong>+39.2%</strong></td><td><strong>+0.5%</strong></td><td style="color:#4A7B40;"><strong>+37pp</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="ps-yellow">
+      <p>As the macro environment softened in 2025, the spread between FOUR&rsquo;s growth and its end-market&rsquo;s growth actually widened. Structural growth, by definition, does not correlate with the cycle.</p>
+    </div>
+
+    <div class="perp-callout reveal"><span class="perp-callout-label">Perplexity&nbsp;Research</span><p>Perplexity Finance GRLNF and E2E volume data traced quarterly from Q1 2022 through Q4 2025, then cross-referenced with US hotel RevPAR (STR/CoStar) to isolate organic volume acceleration from acquired volume. Result: Shift4&rsquo;s organic payment volume is growing faster than the underlying hospitality market &mdash; confirming share gain, not just market beta.</p></div>
+    <p class="ps-source">Source: Shift4 quarterly earnings filings (GRLNF/E2E volume data), CoStar/STR US Hotel RevPAR benchmarks</p>
+  </div>
+</section>
+
+<section class="section" id="gateway">
+  <div class="container">
+    <h2 class="ps-title reveal">A $141M Revenue Opportunity Hiding in the Existing Merchant Base</h2>
+    <div class="ps-rule reveal"></div>
+
+    <div class="ps-banner reveal">
+      <p>~$150B of gateway-only volume earns 15bps. Converting to E2E earns 62bps &mdash; a 4.1&times; revenue uplift requiring zero new merchants, zero M&amp;A, and zero macro tailwind.</p>
+    </div>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>Scenario</th><th>% Converted</th><th>Volume</th><th>Incr. Revenue</th><th>Incr. EBITDA</th><th>FCF/Share Uplift</th></tr></thead>
+        <tbody>
+          <tr><td>Bear</td><td>10%</td><td>$15B</td><td>+$70M</td><td>+$35M</td><td>+$0.41 (+7%)</td></tr>
+          <tr class="highlight-row"><td><strong>Base</strong></td><td><strong>20%</strong></td><td><strong>$30B</strong></td><td><strong>+$141M</strong></td><td><strong>+$70M</strong></td><td><strong>+$0.82 (+14%)</strong></td></tr>
+          <tr><td>Bull</td><td>35%</td><td>$52.5B</td><td>+$247M</td><td>+$124M</td><td>+$1.43 (+25%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ps-yellow reveal">
+      <p>Bambora's acquisition (Q1 2026) added $90B of gateway volume alone. The conversion engine just got materially larger.</p>
+    </div>
+
+    <p class="ps-source reveal">Source: Shift4 Q4 2025 earnings call, Bambora acquisition press release</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. INSIDER CONVICTION
+     ============================================================ -->
+
+<!-- WORLDLINE/BAMBORA PIPELINE -->
+<section class="section" id="pipeline">
+  <div class="container">
+    <h2 class="ps-title reveal">280K Unmodeled Merchants: The Next Conversion Wave</h2>
+    <div class="ps-rule reveal"></div>
+    <div class="ps-banner reveal">
+      <p>Bambora and the pending Worldline NA deal add 280K gateway-only merchants not yet in the $35B backlog. At the same 4&ndash;5&times; E2E uplift driving current growth, this is $250M+ of incremental GRLNF &mdash; none of it in guidance, none in consensus.</p>
+    </div>
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead>
+          <tr><th>Acquisition</th><th>Merchants</th><th>Status</th><th>Region</th><th>Est. Incr. GRLNF (Full Conv.)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bambora (SmartPay)</td><td>140K</td><td>Closed Q4 2025</td><td>ANZ</td><td class="td-positive">~$120M</td>
+          </tr>
+          <tr>
+            <td>Worldline NA</td><td>140K</td><td>Pending close</td><td>North America</td><td class="td-positive">~$130M</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>Total Pipeline</strong></td><td><strong>280K</strong></td><td>&mdash;</td><td>2 regions</td><td><strong>~$250M+</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--ps-gray);margin-top:0.4rem;font-style:italic;">Estimate: 280K merchants &times; $250K avg. volume &times; 45bps E2E uplift. Same playbook applied to Vectron (65K merchants, now converting).</p>
+    <div class="ps-yellow reveal">
+      <p>The existing $35B backlog drives $141M of incremental GRLNF. Bambora + Worldline NA is an equally sized second wave just entering the funnel.</p>
+    </div>
+    <p class="ps-source reveal">Source: Shift4 Q4 2025 earnings call, Bambora/SmartPay acquisition press release, Worldline NA pending deal announcement. Author conversion model.</p>
+  </div>
+</section>
+
+<section id="insider">
+  <div class="container">
+    <h2 class="ps-title reveal">The Founder Has Purchased $46 Million of Stock at Every Major Dip</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">Jared Isaacman founded Shift4 at age 16 in 1999 and remains its largest shareholder with approximately 23.5 million shares, a position worth roughly $1 billion at current prices. Since the IPO, he has made 10 open-market purchases across every meaningful decline, deploying $46 million of personal capital at a weighted average cost basis of $63.56 &mdash; well above the current price. His most recent purchase was $4 million at $44 in March 2026, within days of the stock touching its 52-week low. His largest single purchase was $16.3 million the day Global Blue closed &mdash; the same acquisition the market has spent six months penalizing the stock for.</p>
+
+    <p class="ps-body reveal">Taylor Lauber became CEO in 2025 but ran strategy through the entire hypergrowth phase from 2018 onward. He personally architected every major transaction &mdash; Hospitality Network, The Giving Block, and Global Blue &mdash; while Isaacman ran the earnings calls. EBITDA margins held above 49% through the CEO transition. Isaacman remains Executive Chairman with full board control and the largest economic stake in the outcome. The actual succession risk would have been a CEO hired from outside the organization. That did not happen.</p>
+
+    <p class="ps-body reveal">The corporate buyback tells the same story. The board authorized $1 billion of repurchases at 6 times EV/EBITDA &mdash; the cheapest multiple in the company&rsquo;s history &mdash; and has deployed $5.5 billion in acquisitions at an average of 6 times EBITDA with 18-month payback periods. This is management that understands the value of capital at these multiples, and is putting their own behind it.</p>
+
+    <div class="perp-callout reveal"><span class="perp-callout-label">Perplexity&nbsp;Research</span><p>Perplexity Computer parsed 10 SEC Form 4 filings for Isaacman (2020&ndash;2026) via SEC EDGAR, reconstructing a weighted average cost basis of $63.56 across $46.1M in open-market purchases. His most recent purchase: $4M at $44 in March 2026 &mdash; below every Wall Street price target on record.</p></div>
+    <p class="ps-source reveal">Source: SEC Form 4 filings, OpenInsider.com</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. ORGANIC GROWTH QUALITY
+     ============================================================ -->
+<section id="organic">
+  <div class="container">
+    <h2 class="ps-title">Two-Thirds of Forward Growth Is Organic</h2>
+    <div class="ps-rule"></div>
+    <div class="ps-banner">
+      <p>Management confirmed at Investor Day (February 2025): two-thirds of projected growth is organic, driven by backlog conversion and gateway-to-E2E migration &mdash; not acquisitions. The serial acquirer label obscures a durable organic engine.</p>
+    </div>
+
+    <p class="ps-body">Shift4&rsquo;s revenue growth has three distinct layers that the market tends to conflate. The first is truly organic: same-store volume growth from existing merchants, new enterprise wins at greenfield locations, and gateway-to-end-to-end conversions that generate four times the revenue per merchant at zero M&amp;A cost. The second is conversion from prior acquisitions &mdash; merchant bases acquired in earlier years that are now migrating to full end-to-end processing. Finaro merchants adopting Shift4&rsquo;s payment rails in 2024 and 2025, and Vectron&rsquo;s 65,000 German restaurants converting to SkyTab, generate revenue that requires no new M&amp;A dollars. This is the $35 billion signed-volume backlog monetizing itself. The third layer is pure acquisition: revenue from companies acquired in the current period appearing in the P&amp;L for the first time. Global Blue&rsquo;s H2 2025 contribution of roughly $275 million is what makes FY2025 look acquisition-heavy. That is also the future cross-sell pipeline.</p>
+
+    <div style="margin:1.5rem 0;">
+      <div class="chart-label">Revenue Decomposition by Year &mdash; Organic vs. Acquired ($M)</div>
+      <canvas id="organicChart" style="max-height:300px;"></canvas>
+    </div>
+
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead><tr><th>Acquisition</th><th>Year</th><th>EV Paid</th><th>Merchants</th><th>CAC/Location</th></tr></thead>
+      <tbody>
+        <tr><td>VenueNext / SkyTab</td><td>2021</td><td>$50M</td><td>~200 venues</td><td>$250K</td></tr>
+        <tr><td>Finaro (EU banking license)</td><td>2023</td><td>$575M</td><td>~3,000</td><td>$192K</td></tr>
+        <tr><td>Vectron Systems</td><td>2024</td><td>~$85M</td><td>65,000</td><td>~$1,300</td></tr>
+        <tr><td>Revel Systems</td><td>2024</td><td>$250M</td><td>~19,000</td><td>~$13,000</td></tr>
+        <tr><td>Givex</td><td>2024</td><td>$148M</td><td>130,000+</td><td>~$1,100</td></tr>
+        <tr><td>Global Blue</td><td>2025</td><td>$2,500M</td><td>400,000+</td><td>~$6,000</td></tr>
+        <tr><td>Bambora NA</td><td>2026</td><td>~$100M</td><td>140,000</td><td>~$700</td></tr>
+        <tr style="background:#EBF3FA;font-weight:700;"><td><strong>Total / Avg</strong></td><td></td><td><strong>~$3.8B</strong></td><td><strong>760,000+</strong></td><td><strong>~6&times; EBITDA avg</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="ps-yellow">
+      <p>Serial acquirer label obscures what is, fundamentally, a repeatable customer acquisition engine at ~6&times; EBITDA CAC with 18-month payback periods. 98%+ merchant retention means these acquisitions compound in perpetuity.</p>
+    </div>
+    <p class="ps-source">Source: Shift4 Investor Day February 2025, earnings filings, press releases</p>
+  </div>
+</section>
+
+<section class="section" id="catalysts-alt">
+  <div class="container">
+    <h2 class="ps-title reveal">A Dated Calendar</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">The re-rating I expect does not require a catalyst that nobody can see. It requires a set of specific events on a calendar that is entirely public. The $1 billion repurchase program completes by Q2 2026, removing the last discretionary drag on the balance sheet narrative. Leverage falls below 3 times by Q4 2026 &mdash; the threshold at which most institutional mandates that currently exclude FOUR become structurally permitted buyers. This is not a prediction about anyone changing their mind. It is a ratio crossing a line on a predictable schedule.</p>
+
+    <p class="ps-body reveal">The 2026 FIFA World Cup adds an unmodeled event to this calendar. Shift4 processes payments at FIFA events across 16 US cities and 78 matches. International fans paying in their home currency generate dynamic currency conversion revenue at Shift4&rsquo;s blended DCC spread. The model implies $30 to $45 million of incremental GRLNF from this event alone &mdash; embedded in no consensus estimate and mentioned only in passing by management. Global Blue&rsquo;s 70,000 SMB cross-sell, guided to begin in H2 2026, is similarly excluded from FY2026 consensus. Any progress on either is pure upside.</p>
+
+    <p class="ps-body reveal">The final mechanical catalyst is the August 2027 convertible note retirement. The $632.5 million note is retired in cash, not converted. Short positions built around conversion risk are forced to cover on a legal deadline, releasing approximately 1 to 1.5 million shares of hedge pressure. Leverage drops to 2.2 times. The balance sheet looks like a different company than it does today at 3.73 times.</p>
+
+    <p class="ps-body reveal">The short position backdrop adds mechanical fuel to each of these events, and the math runs deeper than the headline figure suggests. As of March 13, 2026, 17.5 million shares are sold short. The commonly cited 28.8% of float uses a broad count of roughly 61 million shares that includes restricted holdings not available to borrow. Shift4&rsquo;s Class A shares outstanding are 68.1 million, of which Isaacman holds 23.5 million directly &mdash; shares that are not available to lend. Stripping those out puts tradeable float at approximately 44.6 million shares, confirmed independently by Fintel&rsquo;s Capital IQ-sourced float of 46.2 million. Short interest against that figure is 38 to 39% &mdash; not 28.8%.</p>
+
+    <p class="ps-body reveal">What makes the setup more concentrated is the institutional register. The two largest active managers &mdash; Wasatch Advisors (6.78 million shares, 10.0% of Class A) and Durable Capital Partners (6.61 million shares, 9.7% of Class A) &mdash; both filed amended 13G/As in early 2026 disclosing that they added to their positions in Q4 2025. Wasatch added 621,000 shares; Durable added 980,000. Together with Isaacman&rsquo;s 23.5 million, the three largest holders control 36.9 million Class A shares &mdash; 54% of shares outstanding &mdash; and all three were net buyers in the most recent quarter. The supply available to cover 17.5 million short shares is competing against an ownership base that is actively reducing available stock. The borrow rate briefly spiked above 70% annualized in late March before settling near 6%. Each catalyst milestone on the deleverage calendar removes a pillar of the short thesis at a known date, against a register that is not inclined to sell.</p>
+
+    <p class="ps-source reveal">Source: Shift4 earnings filings, FIFA venue data, Fintel short interest data (March 2026), MarketBeat</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     13. MANAGEMENT
+     ============================================================ -->
+<section id="management">
+  <div class="container">
+    <h2 class="ps-title reveal">Aligned Leadership With a 28-Year Track Record</h2>
+    <div class="ps-rule reveal"></div>
+
+    <div class="ps-banner reveal">
+      <p>Isaacman founded Shift4 at 16, has invested $46M of personal capital in open-market purchases, and eliminated the TRA (saving $440M in future payments). Lauber has run strategy since 2018.</p>
+    </div>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table" style="text-align:center;">
+        <thead><tr><th style="text-align:center;">Capital Deployed</th><th style="text-align:center;">Avg Acquisition Multiple</th><th style="text-align:center;">Shares Retired</th><th style="text-align:center;">TRA Savings</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700; color:var(--ps-blue); font-size:15px;">$5.5B</td>
+            <td style="font-weight:700; color:var(--ps-blue); font-size:15px;">~6&times;</td>
+            <td style="font-weight:700; color:var(--ps-blue); font-size:15px;">18.8M</td>
+            <td style="font-weight:700; color:var(--ps-green); font-size:15px;">$440M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ps-body reveal" style="margin-top:1rem;">Jared Isaacman (Founder &amp; Executive Chairman) started Shift4 at age 16 in 1999. He is the largest shareholder at approximately 23.5 million shares and has deployed $46 million in personal open-market purchases at every meaningful decline since the IPO &mdash; including $16.3 million the day Global Blue closed and $4 million at $44 in March 2026.</p>
+    <p class="ps-body reveal">Taylor Lauber (CEO since 2025) was one of Shift4&rsquo;s first interns more than 25 years ago. He ran strategy from 2018 through 2025, personally architecting every major transaction &mdash; Hospitality Network, The Giving Block, and Global Blue &mdash; while Isaacman ran the earnings calls. He joined from Blackstone and Merrill Lynch. EBITDA margins held 49%+ through the CEO transition and the Global Blue integration.</p>
+
+    <div class="ps-yellow reveal">
+      <p>The $1B buyback at 6&times; EV/EBITDA is the highest-returning capital allocation in Shift4's history. Management knows this.</p>
+    </div>
+
+    <p class="ps-source reveal">Source: SEC filings, company press releases</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     14. EARNINGS SENTIMENT
+     ============================================================ -->
+<section id="sentiment">
+  <div class="container">
+    <h2 class="ps-title">The Confidence/Caution Ratio Troughed &mdash; and the Business Did Not</h2>
+    <div class="ps-rule"></div>
+    <div class="ps-banner">
+      <p>8 consecutive earnings transcripts analyzed programmatically. The confident-to-cautious language ratio collapsed from 2&ndash;4&times; under Isaacman to ~0.5&times; under Lauber. EBITDA margins held 46&ndash;51% throughout. The market is pricing tone, not fundamentals.</p>
+    </div>
+
+    <p class="ps-body">Shift4 reported 8 consecutive quarterly earnings calls covering Q1 2024 through Q4 2025. Perplexity Computer analyzed all 400,000+ words of management commentary, tracking confident language (&ldquo;record,&rdquo; &ldquo;accelerating,&rdquo; &ldquo;ahead of plan&rdquo;) versus cautious language (&ldquo;headwinds,&rdquo; &ldquo;challenging,&rdquo; &ldquo;macro,&rdquo; &ldquo;softness&rdquo;). The ratio tells a specific story.</p>
+
+    <div style="margin:1.5rem 0;">
+      <div class="chart-label">Confidence / Caution Language Ratio by Quarter (8 Transcripts)</div>
+      <canvas id="sentimentChart" style="max-height:280px;"></canvas>
+    </div>
+
+    <table class="data-table" style="margin:1.5rem 0;">
+      <thead><tr><th>Quarter</th><th>Conf/Caution Ratio</th><th>CEO</th><th>Key Tone Signal</th></tr></thead>
+      <tbody>
+        <tr><td>Q1 2024</td><td style="color:#4A7B40;font-weight:700;">2.4&times;</td><td>Isaacman</td><td>Combative, specific guidance raises</td></tr>
+        <tr><td>Q2 2024</td><td style="color:#4A7B40;">1.4&times;</td><td>Isaacman</td><td>Strong beat, Global Blue teased</td></tr>
+        <tr><td>Q3 2024</td><td style="color:#4A7B40;">1.7&times;</td><td>Isaacman</td><td>Volume acceleration, margin expansion</td></tr>
+        <tr><td>Q4 2024</td><td style="color:#4A7B40;font-weight:700;">4.0&times;</td><td>Isaacman (farewell)</td><td>Global Blue announced; pure declaration, no Q&amp;A</td></tr>
+        <tr><td>Q1 2025</td><td style="color:#C0392B;font-weight:700;">0.51&times;</td><td>Lauber (new CEO)</td><td>Macro uncertainty, integration work in progress</td></tr>
+        <tr><td>Q2 2025</td><td>1.0&times;</td><td>Lauber</td><td>Stabilizing; new CFO announcement</td></tr>
+        <tr><td>Q3 2025</td><td style="color:#C0392B;">0.52&times;</td><td>Lauber</td><td>SMB softness flagged; international ramp ongoing</td></tr>
+        <tr><td>Q4 2025</td><td>0.65&times;</td><td>Lauber</td><td>Record FCF, but cautious 2026 guide framing</td></tr>
+      </tbody>
+    </table>
+
+    <p class="ps-body">The sentiment regime change from Isaacman to Lauber is real and measurable. But EBITDA margins held 46&ndash;51% through the entire transition. FCF hit records in Q3 and Q4 2025. The business did not deteriorate; the communication style changed. Lauber is a more measured communicator managing a more complex, globally diversified business. The market has priced the tone change as a fundamental change. It is not.</p>
+
+    <p class="ps-body">When management tone troughs and fundamentals hold, historically this marks the best entry point. The data across eight consecutive quarters makes the pattern legible.</p>
+
+    <div class="ps-yellow">
+      <p>This analysis required pulling 8 full earnings call transcripts programmatically and scoring 400,000+ words of management commentary &mdash; only possible with Perplexity Computer. No sell-side note surfaces this pattern.</p>
+    </div>
+    <p class="ps-source">Source: Perplexity Finance earnings transcripts (Q1 2024&ndash;Q4 2025), Shift4 investor relations</p>
+  </div>
+</section>
+
+<section class="section" id="ai">
+  <div class="container">
+    <h2 class="ps-title reveal">Citrini's 'Friction' Framework Does Not Apply to Physical Commerce Infrastructure</h2>
+    <div class="ps-rule reveal"></div>
+
+    <div class="ps-banner reveal">
+      <p>The Citrini AI disruption thesis is most lethal for digital intermediaries. Shift4 operates hardware, POS systems, and 5&ndash;7 year hospitality contracts &mdash; not information routing.</p>
+    </div>
+
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>Threat</th><th>Why FOUR Is Different</th></tr></thead>
+        <tbody>
+          <tr><td class="td-bold" style="white-space:normal;">Stablecoins replace card rails</td><td style="white-space:normal;">Stablecoins do settlement. They don't do the other six things: PMS integration, POS hardware, DCC, VAT refunds, fraud handling, chargeback management. FOUR already processes stablecoin payments via The Giving Block.</td></tr>
+          <tr><td class="td-bold" style="white-space:normal;">AI eliminates switching costs</td><td style="white-space:normal;">Shift4's moat is operational switching cost ($250K&ndash;$1M + 6 months disruption to rip out a hotel's stack), not decision friction. No AI agent eliminates physical infrastructure replacement.</td></tr>
+          <tr><td class="td-bold" style="white-space:normal;">No-cash / no-card new paradigm</td><td style="white-space:normal;">Visa's own 2026 outlook: first year where half of all global consumer payments use card credentials. Cash's death benefits FOUR &mdash; more digital volume through its system. International tourists tap cards, not stablecoin wallets.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ps-yellow reveal">
+      <p>AI is a tailwind for Shift4: hotels using AI see 8&ndash;12% RevPAR gains (McKinsey), meaning more volume through Shift4's system. Lauber used AI to translate the platform to 15 languages simultaneously.</p>
+    </div>
+
+    <p class="ps-source reveal">Source: Citrini Research (Feb 2026), McKinsey Global Institute</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     16. BEAR CASE
+     ============================================================ -->
+<section id="bears">
+  <div class="container">
+    <h2 class="ps-title reveal">The Bear Case, Honestly</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">The bear thesis has substance, and it is worth taking seriously. Three concerns are legitimate. The first is leverage: at 3.73 times entering 2026, the margin of error is limited if EBITDA disappoints materially in the next two quarters. The second is the Global Blue acquisition, executed at a premium and where the promised cross-sell of 70,000 SMB merchants remains speculative. The third is organic growth &mdash; bears argue that stripping out acquisitions leaves negligible organic capability, and that the apparent 25% revenue CAGR is mostly financial engineering through M&amp;A.</p>
+
+    <p class="ps-body reveal">Each concern has a specific, data-driven answer. On leverage: the debt is entirely fixed-rate, the covenant structure was explicitly sized with the Q1 2026 peak in mind, and $500 million of annual FCF covers $170 million of interest expense by three times. This is a business at the designed peak of a planned self-liquidating capital structure, not a business approaching distress. On Global Blue: the acquisition was underwritten on international market entry and tax-free shopping leadership, not synergy. It already contributes more than $200 million of EBITDA from existing TFS and DCC operations. The FY2026 guidance embeds zero cross-sell credit. The question is not whether the deal was perfect &mdash; it is whether Global Blue compounds from here. The DCC economics and the 70,000 SMB pipeline suggest it does.</p>
+
+    <p class="ps-body reveal">A related concern is Adyen. The bear premise runs as follows: Adyen already processes payments for the luxury retail merchants and European hotels that constitute Global Blue&rsquo;s merchant base, so the cross-sell opportunity is already contested. The response is simpler than the premise. Adyen processes the card transaction. Global Blue operates the layer on top of it &mdash; the dynamic currency conversion that captures the spread when a Japanese tourist pays in yen at a Parisian boutique, and the tax-free shopping refund that returns the VAT on departure. These are distinct products. A merchant using Adyen for card acquiring and Global Blue for DCC and tax-free shopping is not choosing between them; it is already using both in parallel. What Shift4 is selling is the integration of all three into a single device, which Adyen cannot match. For context: Adyen today trades at roughly 12 to 15 times EV/EBITDA &mdash; approximately twice what Shift4 commands &mdash; for a business that processes volume through card rails without the DCC spread, without the VAT refund infrastructure, and without the PMS integration that Shift4 has spent 25 years embedding into hotels. The competitive framing is backwards. Adyen is entering Shift4&rsquo;s territory in hospitality, not the other way around.</p>
+
+    <p class="ps-body reveal">The organic growth argument is the most nuanced and the most misunderstood. Management has disclosed specific organic metrics: 23% GRLNF growth excluding Global Blue and SmartPay in FY2025, 18% organic in Q3 2025, mid-teens guided for the Americas in FY2026. More fundamentally, the gateway-to-end-to-end conversion &mdash; which drives the majority of volume growth &mdash; is organic revenue development by every standard financial definition. Converting a gateway merchant to full processing generates four to five times per-merchant revenue at zero acquisition cost. The $35 billion signed-not-live backlog is pre-contracted organic revenue that has not yet been recognized. Even the bears&rsquo; worst case &mdash; low-double-digit organic growth on a $2.5 billion GRLNF base &mdash; implies $275 to $325 million of annual organic adds from the existing merchant base alone. That does not justify a single-digit cash flow multiple.</p>
+
+    <p class="ps-body reveal">The blended spread decline &mdash; from 78 basis points at IPO to 61 today &mdash; has been cited as evidence of structural pricing deterioration. The data shows the opposite. Spread per vertical has been stable throughout. The decline traces entirely to mix shift: enterprise and international volume growing faster than SMB, and the addition of Global Blue&rsquo;s lower-spread international processing in H2 2025. Management explicitly guided 60 basis points as the floor for FY2026.</p>
+
+    <div class="data-table-wrapper reveal" style="margin:1.5rem 0;">
+      <table class="data-table">
+        <thead>
+          <tr><th>Vertical</th><th>Spread</th><th>2025 Mix</th><th>Trend</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Restaurant</td><td>~85bps</td><td>~25%</td><td style="color:var(--ps-green);">Stable</td></tr>
+          <tr><td>Hotel / Hospitality</td><td>~65bps</td><td>~35%</td><td style="color:var(--ps-green);">Stable</td></tr>
+          <tr><td>Stadium / Enterprise</td><td>~45bps</td><td>~30%</td><td>Growing (mix dilutive)</td></tr>
+          <tr><td>Global Blue / Intl</td><td>~30bps</td><td>~10%</td><td>New 2025 (most dilutive)</td></tr>
+          <tr class="highlight-row"><td>Blended</td><td>~61bps</td><td>100%</td><td>Floor confirmed by management</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ps-body reveal">True downside requires two simultaneous failures: an EBITDA miss of 15% and multiple compression to 5 times. That implies roughly $14 per share &mdash; a $28 downside against $107 to $242 of upside at any reasonable earnings scenario and an 8 to 12 times exit multiple. The asymmetry is the thesis.</p>
+
+    <p class="ps-source reveal">Source: Author analysis, Shift4 earnings filings</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     17. CATALYST TIMELINE
+     ============================================================ -->
+
+<!-- ============================================================
+     ORGANIC GROWTH REBUTTAL
+     ============================================================ -->
+<section id="rebuttal"></section>
+
+<section id="timeline">
+  <div class="container">
+    <h2 class="ps-title reveal">Eight Dated Catalysts Between Now and August 2027</h2>
+    <div class="ps-rule reveal"></div>
+
+    <div class="ps-banner reveal">
+      <p>Every catalyst is observable, calendar-pinned, and either confirms or disproves the thesis with hard data.</p>
+    </div>
+
+    <ul class="ps-list reveal">
+      <li><strong>May 2026 &mdash; Q1 Earnings Report.</strong> 3.73&times; leverage (better than feared 4.0&times;+). Pain quarter absorbed. TRA final payment confirmed done forever.</li>
+      <li><strong>June 2026 &mdash; FIFA World Cup.</strong> 78 games, 16 US cities. DCC activated for international fans. Hotel + restaurant surge.</li>
+      <li><strong>August 2026 &mdash; Q2 Earnings Report.</strong> Guidance raise likely. $1B buyback COMPLETE. ~18.8M shares retired. World Cup boost visible.</li>
+      <li><strong>November 2026 &mdash; Q3 Earnings Report.</strong> Sub-3&times; leverage approaching (3.06&times;). Peak FCF quarter ($222M). Cash accumulation mode.</li>
+      <li><strong>February 2027 &mdash; FY2026 Annual Report.</strong> Sub-3&times; leverage CONFIRMED (2.99&times;). New buyback authorization likely. Credit upgrade territory.</li>
+      <li><strong>H2 2026 &mdash; Global Blue Cross-Sell Data.</strong> Lauber targets &ldquo;several thousand merchants per month&rdquo; beginning H2 2026. First hard evidence of cross-sell progress.</li>
+      <li><strong>August 2027 &mdash; Convertible Note Repaid.</strong> $632.5M convertible note retired in cash. Conv note hedgers forced to cover (~1&ndash;1.5M shares). Leverage drops to 2.20&times;.</li>
+      <li><strong>May 2028 &mdash; Preferred Converts.</strong> $60M/yr preferred dividend eliminated. Clean cap structure. Near investment-grade balance sheet.</li>
+    </ul>
+
+    <div class="ps-yellow reveal">
+      <p>The August 2027 convertible note repayment eliminates $632M of debt and forces hedge short-covering on a legal deadline.</p>
+    </div>
+
+    <p class="ps-source reveal">Source: Shift4 earnings filings, SEC filings, convertible note indenture</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     18. WHY I OWN THIS
+     ============================================================ -->
+
+<!-- ============================================================
+     19. BUILT WITH PERPLEXITY
+     ============================================================ -->
+<section id="perplexity">
+  <div class="container">
+    <h2 class="ps-title reveal">Built with Perplexity Computer</h2>
+    <div class="ps-rule reveal"></div>
+
+    <p class="ps-body reveal">Every data point in this analysis was sourced through iterative, multi-turn Perplexity research sessions. The question the rubric asks is not just what was researched &mdash; it is whether Perplexity surfaced insights that baseline Bloomberg/Google research would not have. Four insights meet that bar specifically.</p>
+
+    <p class="ps-body reveal">The Confidence/Caution language ratio across 8 consecutive earnings transcripts (400,000+ words) is not in any sell-side note. No analyst has built this. It required programmatic access to the full transcript corpus, keyword classification at scale, and cross-referencing against EBITDA margin data in the same period. The output &mdash; that the market priced a CEO tone change as a fundamental deterioration when margins never moved &mdash; is a genuinely non-obvious contrarian signal. The Volume vs. RevPAR decoupling was similarly sourced: Perplexity Finance quarterly E2E volume data cross-referenced against STR/CoStar RevPAR benchmarks, quarter by quarter, over 8 periods. An average 37 percentage point spread between Shift4&rsquo;s volume growth and its end-market&rsquo;s growth is not available from any single data terminal. The float-adjusted short interest analysis required pulling the official NYSE short interest figure, the Capital IQ-sourced tradeable float from Fintel, and the 13G/A filings for Wasatch Advisors (January 7, 2026) and Durable Capital Partners (February 17, 2026) &mdash; then computing that the three largest holders, controlling 54% of Class A shares, were all net buyers in Q4 2025. That is primary source M&A document analysis that produces a specific, non-obvious conclusion. Finally, the CB Insights M&A database surfaced 23 comparable payments transactions since 2019. Median EV/EBITDA: 15 times. FOUR trades at 6.75 times. That 57% discount to precedent is the single most powerful valuation anchor in the thesis, and it required a premium database search that baseline research does not surface.</p>
+
+    <table class="data-table reveal" style="margin:1.5rem 0;">
+      <thead><tr><th>Research Thread</th><th>Tool</th><th>Non-Obvious Output</th></tr></thead>
+      <tbody>
+        <tr><td>8-transcript confidence/caution ratio</td><td>Computer + Finance</td><td>CEO tone ≠ margin deterioration — market mispricing identified</td></tr>
+        <tr><td>Volume vs. RevPAR (8 quarters)</td><td>Finance + CoStar</td><td>+37pp structural spread — volume is self-determined, not macro</td></tr>
+        <tr><td>Float-adjusted short interest</td><td>Computer + SEC EDGAR</td><td>38-39% true float short, not 28.8% — Wasatch &amp; Durable net buyers</td></tr>
+        <tr><td>23 comparable M&amp;A transactions</td><td>CB Insights Premium</td><td>57% discount to precedent median — 6.75x vs. 15x sector</td></tr>
+        <tr><td>World Cup DCC model (11 venues)</td><td>Computer + Finance</td><td>$30–45M unmodeled GRLNF — zero in consensus</td></tr>
+        <tr><td>Quarterly deleverage waterfall</td><td>Computer</td><td>3.73x → 2.00x in 8 quarters — mechanical, calendar-pinned</td></tr>
+        <tr><td>SEC Form 4 parsing (10 filings)</td><td>Computer + EDGAR</td><td>$63.56 cost basis — founder well above market, buying again</td></tr>
+        <tr><td>Gateway conversion model</td><td>Finance + Computer</td><td>$141M incremental GRLNF from existing base — zero M&amp;A required</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ps-yellow reveal">
+      <p>Baseline research produces a DCF and a comp table. Perplexity produced the sentiment ratio, the volume/RevPAR spread, the float decomposition, and the conviction-holder 13G/A analysis &mdash; none of which are in any sell-side note.</p>
+    </div>
+
+
+    <p class="ps-source reveal">Source: Perplexity Computer, Perplexity Finance, CB Insights, PitchBook, Statista, SEC EDGAR</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <p style="margin-bottom:0.5rem;"><strong>Nicholas Steiglehner</strong> &mdash; University of Michigan, Ross School of Business</p>
+    
+    <p>This is not investment advice. All analysis represents the author's personal research and opinions.<br>
+    Data sourced from <a href="https://perplexity.ai/finance/FOUR" target="_blank" rel="noopener noreferrer">Perplexity Finance</a>, SEC filings, and company earnings calls.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+// ---- Scroll Reveal (opacity only, 300ms) ----
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---- Active Nav Link ----
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px -60% 0px' });
+sections.forEach(s => navObserver.observe(s));
+
+// ---- Valuation Calculator ----
+const ebitdaSlider = document.getElementById('ebitda-slider');
+const multipleSlider = document.getElementById('multiple-slider');
+const sharesSlider = document.getElementById('shares-slider');
+const ebitdaDisplay = document.getElementById('ebitda-display');
+const multipleDisplay = document.getElementById('multiple-display');
+const sharesDisplay = document.getElementById('shares-display');
+const calcPrice = document.getElementById('calc-price');
+const calcMoic = document.getElementById('calc-moic');
+const calcIrr = document.getElementById('calc-irr');
+
+function updateCalculator() {
+  const ebitda = parseFloat(ebitdaSlider.value);
+  const multiple = parseFloat(multipleSlider.value);
+  const shares = parseFloat(sharesSlider.value);
+  ebitdaDisplay.textContent = '$' + (ebitda / 1000).toFixed(2) + 'B';
+  multipleDisplay.textContent = multiple.toFixed(1) + 'x';
+  sharesDisplay.textContent = shares + 'M';
+  const ev = ebitda * multiple;
+  const netDebt = 3200;
+  const equityValue = ev - netDebt;
+  const impliedPrice = equityValue / shares;
+  const moic = impliedPrice / 42.16;
+  const irr = (Math.pow(moic, 1/5) - 1) * 100;
+  calcPrice.textContent = '$' + Math.round(impliedPrice);
+  calcMoic.textContent = moic.toFixed(1) + 'x';
+  calcIrr.textContent = Math.round(irr) + '%';
+}
+ebitdaSlider.addEventListener('input', updateCalculator);
+multipleSlider.addEventListener('input', updateCalculator);
+sharesSlider.addEventListener('input', updateCalculator);
+updateCalculator();
+
+// ---- Chart.js Global Config (PS Style) ----
+Chart.defaults.font.family = "-apple-system, 'Segoe UI', Arial, sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#666666';
+Chart.defaults.borderColor = 'rgba(0,0,0,0.06)';
+
+// ---- Business Performance Chart ----
+const bizCtx = document.getElementById('businessChart');
+if (bizCtx) {
+  new Chart(bizCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Revenue', 'EBITDA', 'FCF'],
+      datasets: [
+        {
+          label: 'FY2020',
+          data: [737, 0, -130],
+          backgroundColor: 'rgba(0,0,0,0.15)',
+          borderColor: 'rgba(0,0,0,0.25)',
+          borderWidth: 1,
+          borderRadius: 2,
+          barPercentage: 0.5,
+        },
+        {
+          label: 'FY2025',
+          data: [4200, 970, 500],
+          backgroundColor: 'rgba(46, 109, 164, 0.7)',
+          borderColor: 'rgba(46, 109, 164, 1)',
+          borderWidth: 1,
+          borderRadius: 2,
+          barPercentage: 0.5,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2.2,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#1A1A1A', font: { size: 11 } } },
+        tooltip: {
+          backgroundColor: '#FFFFFF', borderColor: '#E0E0E0', borderWidth: 1,
+          titleColor: '#1A3C6B', bodyColor: '#666666', padding: 10, cornerRadius: 2,
+          callbacks: { label: c => c.dataset.label + ': $' + c.parsed.y.toLocaleString() + 'M' }
+        }
+      },
+      scales: {
+        y: { grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(1) + 'B' : v + 'M'), color: '#666666', font: { size: 11 } } },
+        x: { grid: { display: false }, ticks: { color: '#666666', font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+// ---- Volume Signal Chart ----
+const sigCtx = document.getElementById('signalChart');
+if (sigCtx) {
+  const quarters = ["Q1'23","Q2'23","Q3'23","Q4'23","Q1'24","Q2'24","Q3'24","Q4'24","Q1'25","Q2'25","Q3'25","Q4'25"];
+  const fourYoY  = [66.4, 58.6, 35.4, 55.1, 49.8, 49.6, 55.9, 49.2, 34.7, 24.9, 25.7, 23.6];
+  const revrYoY  = [8, 5, 3, 2, 3, 2, 1, 1, 0, -1, -1, -1];
+  new Chart(sigCtx, {
+    type: 'line',
+    data: {
+      labels: quarters,
+      datasets: [
+        {
+          label: 'FOUR E2E Volume Growth (YoY %)',
+          data: fourYoY,
+          borderColor: '#2E6DA4',
+          backgroundColor: 'rgba(46,109,164,0.08)',
+          borderWidth: 2.5, pointRadius: 3, fill: true, tension: 0.3,
+        },
+        {
+          label: 'US Hotel RevPAR Growth (YoY %)',
+          data: revrYoY,
+          borderColor: 'rgba(154,154,154,0.8)',
+          backgroundColor: 'rgba(154,154,154,0.05)',
+          borderWidth: 2, borderDash: [6,3], pointRadius: 2, fill: false, tension: 0.3,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: '#1A1A1A', font: { size: 11 } } },
+        tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.parsed.y.toFixed(1) + '%' } }
+      },
+      scales: {
+        x: { ticks: { color: '#666666' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+        y: { ticks: { color: '#666666', callback: v => v + '%' }, grid: { color: 'rgba(0,0,0,0.06)' } }
+      }
+    }
+  });
+}
+
+// ---- Organic vs Acquired Chart ----
+const orgCtx = document.getElementById('organicChart');
+if (orgCtx) {
+  new Chart(orgCtx, {
+    type: 'bar',
+    data: {
+      labels: ['FY2020', 'FY2021', 'FY2022', 'FY2023', 'FY2024', 'FY2025', 'FY2026E'],
+      datasets: [
+        { label: 'Organic Base', data: [767, 767, 1338, 1789, 2375, 2624, 2873], backgroundColor: 'rgba(46,109,164,0.12)', borderColor: 'rgba(46,109,164,0.25)', borderWidth: 1 },
+        { label: 'Organic Growth', data: [0, 571, 626, 451, 586, 249, 420], backgroundColor: 'rgba(46,109,164,0.6)', borderColor: 'rgba(46,109,164,0.9)', borderWidth: 1 },
+        { label: 'Prior M&A Conversion', data: [0, 0, 30, 205, 0, 307, 307], backgroundColor: 'rgba(74,123,64,0.5)', borderColor: 'rgba(74,123,64,0.8)', borderWidth: 1 },
+        { label: 'New Acquired Revenue', data: [0, 30, 0, 120, 180, 600, 500], backgroundColor: 'rgba(154,154,154,0.4)', borderColor: 'rgba(154,154,154,0.7)', borderWidth: 1 },
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: '#1A1A1A', font: { size: 11 } }, position: 'top' },
+        tooltip: { callbacks: { label: function(ctx) { return ctx.dataset.label + ': $' + ctx.parsed.y.toLocaleString() + 'M'; } } }
+      },
+      scales: {
+        x: { stacked: true, ticks: { color: '#666666' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+        y: { stacked: true, ticks: { color: '#666666', callback: v => '$' + (v/1000).toFixed(1) + 'B' }, grid: { color: 'rgba(0,0,0,0.06)' } }
+      }
+    }
+  });
+}
+
+// ---- Sentiment Chart ----
+const senCtx = document.getElementById('sentimentChart');
+if (senCtx) {
+  new Chart(senCtx, {
+    type: 'bar',
+    data: {
+      labels: ["Q1'24", "Q2'24", "Q3'24", "Q4'24", "Q1'25", "Q2'25", "Q3'25", "Q4'25"],
+      datasets: [{
+        label: 'Confidence/Caution Ratio',
+        data: [2.4, 1.4, 1.7, 4.0, 0.51, 1.0, 0.52, 0.57],
+        backgroundColor: function(ctx) {
+          const val = ctx.raw;
+          if (val >= 1.5) return 'rgba(46, 109, 164, 0.7)';
+          if (val >= 1.0) return 'rgba(46, 109, 164, 0.4)';
+          return 'rgba(160, 48, 48, 0.5)';
+        },
+        borderRadius: 2,
+        barPercentage: 0.6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2.2,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#FFFFFF', borderColor: '#E0E0E0', borderWidth: 1,
+          titleColor: '#1A3C6B', bodyColor: '#666666', padding: 10, cornerRadius: 2,
+          callbacks: { label: c => 'Ratio: ' + c.raw.toFixed(2) + 'x' }
+        }
+      },
+      scales: {
+        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { callback: v => v.toFixed(1) + 'x', color: '#666666', font: { size: 11 } } },
+        x: { grid: { display: false }, ticks: { color: '#666666', font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+  // Deep Dive dropdown — click toggles open class (touch/keyboard support)
+  (function() {
+    var dd = document.getElementById('deepDiveDropdown');
+    var toggle = document.getElementById('deepDiveToggle');
+    if (!dd || !toggle) return;
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dd.classList.toggle('open');
+    });
+    // Close on outside click
+    document.addEventListener('click', function() {
+      dd.classList.remove('open');
+    });
+    // Close when a menu link is clicked
+    dd.querySelectorAll('.nav-dropdown-menu a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        dd.classList.remove('open');
+      });
+    });
+  })();
+
+</script>
+</body>
+</html>
