@@ -413,7 +413,68 @@
       .container { padding: 0 1.25rem; }
       section { padding: 2.5rem 0; }
     }
-  </style>
+  
+    /* ── Deep Dive dropdown ───────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      font-size: 10px;
+      color: var(--ps-black);
+      padding: 0.22rem 0.32rem;
+      border-radius: 2px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      transition: all 180ms;
+    }
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown.open .nav-dropdown-toggle {
+      color: var(--ps-blue);
+      font-weight: 700;
+    }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--ps-blue);
+      border-top: 2px solid var(--ps-blue);
+      min-width: 148px;
+      z-index: 300;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      border-radius: 0 0 3px 3px;
+    }
+    .nav-dropdown.open .nav-dropdown-menu,
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu li { list-style: none; }
+    .nav-dropdown-menu a {
+      display: block;
+      font-size: 10px;
+      color: var(--ps-black);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      padding: 0.38rem 0.85rem;
+      white-space: nowrap;
+      transition: background 120ms, color 120ms;
+      text-decoration: none;
+    }
+    .nav-dropdown-menu a:hover {
+      background: #EEF4FF;
+      color: var(--ps-blue);
+    }
+    .nav-dropdown-menu li + li { border-top: 1px solid #eee; }
+    /* caret svg */
+    .dd-caret { width: 8px; height: 8px; fill: none; stroke: currentColor; stroke-width: 2.5; transition: transform 180ms; }
+    .nav-dropdown.open .dd-caret { transform: rotate(180deg); }
+
+    </style>
   <meta property="og:title" content="Shift4 Payments (FOUR) — Long Thesis">
   <meta property="og:description" content="A founder-led compounder at 6x EV/EBITDA. 6.67x MOIC. 49% IRR. The cheapest valuation in its history.">
   <meta property="og:type" content="website">
@@ -444,6 +505,21 @@
       <li><a href="#bears">Bears</a></li>
       <li><a href="#rebuttal">Rebuttal</a></li>
       <li><a href="#position">Position</a></li>
+      <li class="nav-dropdown" id="deepDiveDropdown">
+        <span class="nav-dropdown-toggle" id="deepDiveToggle">
+          Deep Dive
+          <svg class="dd-caret" viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg>
+        </span>
+        <ul class="nav-dropdown-menu">
+          <li><a href="#peers">Peers</a></li>
+          <li><a href="#organic">Organic</a></li>
+          <li><a href="#management">Mgmt</a></li>
+          <li><a href="#sentiment">Sentiment</a></li>
+          <li><a href="#ai">AI Risk</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#perplexity">Built</a></li>
+        </ul>
+      </li>
     </ul>
     <button class="mobile-menu-btn" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -1787,6 +1863,28 @@ if (senCtx) {
     }
   });
 }
+
+  // Deep Dive dropdown — click toggles open class (touch/keyboard support)
+  (function() {
+    var dd = document.getElementById('deepDiveDropdown');
+    var toggle = document.getElementById('deepDiveToggle');
+    if (!dd || !toggle) return;
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dd.classList.toggle('open');
+    });
+    // Close on outside click
+    document.addEventListener('click', function() {
+      dd.classList.remove('open');
+    });
+    // Close when a menu link is clicked
+    dd.querySelectorAll('.nav-dropdown-menu a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        dd.classList.remove('open');
+      });
+    });
+  })();
+
 </script>
 </body>
 </html>
