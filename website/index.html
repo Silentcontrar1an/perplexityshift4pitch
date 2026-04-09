@@ -70,12 +70,12 @@
       z-index: 100;
     }
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0.5rem 2rem;
+      padding: 0.4rem 1.5rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 1.25rem;
     }
     .nav-logo {
       font-weight: 700;
@@ -103,6 +103,7 @@
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+      flex: 1;
     }
     .nav-links::-webkit-scrollbar { display: none; }
     .nav-links a {
@@ -123,12 +124,15 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .nav-links.open { display: flex; position: absolute; top: 100%; left: 0; right: 0; background: #FFFFFF; flex-direction: column; padding: 1rem 2rem; border-bottom: 2px solid var(--ps-blue); }
-      .mobile-menu-btn { display: block; }
+      .mobile-menu-btn {
+      margin-left: auto; display: block; }
     }
     @media (min-width: 769px) {
-      .mobile-menu-btn { display: none; }
+      .mobile-menu-btn {
+      margin-left: auto; display: none; }
     }
-    .mobile-menu-btn { color: var(--ps-blue); padding: 0.4rem; }
+    .mobile-menu-btn {
+      margin-left: auto; color: var(--ps-blue); padding: 0.4rem; }
 
     /* ============================================================
        LAYOUT
@@ -1460,15 +1464,20 @@
     <div class="ps-argument reveal">
       <p class="bear-claim">&#9654; <strong>Bear:</strong> Blended spread has compressed from 78bps to 61bps since IPO &mdash; structural pricing decline.</p>
       <p class="counter-response" style="margin-left:1.5rem; color:#4A7B40;"><strong>Counter &mdash; Mix-Shift, Not Price Compression:</strong> Every basis point of decline traces to enterprise and international volume growing faster than SMB &mdash; not lower rates charged to existing merchants. Spread per vertical is stable. Management guided 60bps+ for FY2026 explicitly.
-      <br><br>
-      <span style="font-size:12px; color:var(--ps-black); font-family:monospace; display:block; background:#f8f8f8; padding:0.6rem 0.8rem; border-radius:4px; line-height:1.8;">
-        Vertical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spread&nbsp;&nbsp;&nbsp;2025 Mix&nbsp;&nbsp;&nbsp;Trend<br>
-        Restaurant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~85bps&nbsp;&nbsp;&nbsp;~25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stable<br>
-        Hotel / Hospitality&nbsp;~65bps&nbsp;&nbsp;&nbsp;~35%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stable<br>
-        Stadium / Enterprise&nbsp;~45bps&nbsp;&nbsp;&nbsp;~30%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Growing (dilutive to mix)<br>
-        Global Blue / Intl&nbsp;&nbsp;~30bps&nbsp;&nbsp;&nbsp;~10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New 2025 (most dilutive)<br>
-        <strong>Blended&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~61bps&nbsp;&nbsp;&nbsp;100%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floor confirmed by mgmt</strong>
-      </span>
+      <div class="data-table-wrapper" style="margin-top:0.75rem; margin-left:0;">
+        <table class="data-table">
+          <thead>
+            <tr><th>Vertical</th><th>Spread</th><th>2025 Mix</th><th>Trend</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Restaurant</td><td>~85bps</td><td>~25%</td><td style="color:var(--ps-green);">Stable</td></tr>
+            <tr><td>Hotel / Hospitality</td><td>~65bps</td><td>~35%</td><td style="color:var(--ps-green);">Stable</td></tr>
+            <tr><td>Stadium / Enterprise</td><td>~45bps</td><td>~30%</td><td>Growing (mix dilutive)</td></tr>
+            <tr><td>Global Blue / Intl</td><td>~30bps</td><td>~10%</td><td>New 2025 (most dilutive)</td></tr>
+            <tr class="highlight-row"><td><strong>Blended</strong></td><td><strong>~61bps</strong></td><td><strong>100%</strong></td><td><strong>Floor confirmed by mgmt</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
       </p>
     </div>
 
