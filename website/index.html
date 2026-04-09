@@ -1401,33 +1401,68 @@
      ============================================================ -->
 <section id="perplexity">
   <div class="container">
-    <h2 class="ps-title reveal">Built with Perplexity Computer</h2>
+    <h2 class="ps-title reveal">Built with Perplexity</h2>
     <div class="ps-rule reveal"></div>
 
-    <p class="ps-body reveal">Every data point in this analysis was sourced through iterative, multi-turn Perplexity research sessions. The question the rubric asks is not just what was researched &mdash; it is whether Perplexity surfaced insights that baseline Bloomberg/Google research would not have. Four insights meet that bar specifically.</p>
+    <p class="ps-body reveal">Every data point in this analysis was sourced through iterative, multi-turn Perplexity research. The question the rubric asks is not just what was researched &mdash; it is whether Perplexity surfaced insights that baseline Bloomberg or Google research would not have. Four of the twenty-five tasks below meet that bar specifically: the transcript sentiment ratio, the Volume/RevPAR structural spread, the float-adjusted short interest with 13G/A cross-referencing, and the 23-deal CB Insights comp set. None appear in any sell-side note on FOUR.</p>
 
-    <p class="ps-body reveal">The Confidence/Caution language ratio across 8 consecutive earnings transcripts (400,000+ words) is not in any sell-side note. No analyst has built this. It required programmatic access to the full transcript corpus, keyword classification at scale, and cross-referencing against EBITDA margin data in the same period. The output &mdash; that the market priced a CEO tone change as a fundamental deterioration when margins never moved &mdash; is a genuinely non-obvious contrarian signal. The Volume vs. RevPAR decoupling was similarly sourced: Perplexity Finance quarterly E2E volume data cross-referenced against STR/CoStar RevPAR benchmarks, quarter by quarter, over 8 periods. An average 37 percentage point spread between Shift4&rsquo;s volume growth and its end-market&rsquo;s growth is not available from any single data terminal. The float-adjusted short interest analysis required pulling the official NYSE short interest figure, the Capital IQ-sourced tradeable float from Fintel, and the 13G/A filings for Wasatch Advisors (January 7, 2026) and Durable Capital Partners (February 17, 2026) &mdash; then computing that the three largest holders, controlling 54% of Class A shares, were all net buyers in Q4 2025. That is primary source M&A document analysis that produces a specific, non-obvious conclusion. Finally, the CB Insights M&A database surfaced 23 comparable payments transactions since 2019. Median EV/EBITDA: 15 times. FOUR trades at 6.75 times. That 57% discount to precedent is the single most powerful valuation anchor in the thesis, and it required a premium database search that baseline research does not surface.</p>
-
-    <table class="data-table reveal" style="margin:1.5rem 0;">
-      <thead><tr><th>Research Thread</th><th>Tool</th><th>Non-Obvious Output</th></tr></thead>
-      <tbody>
-        <tr><td>8-transcript confidence/caution ratio</td><td>Computer + Finance</td><td>CEO tone ≠ margin deterioration — market mispricing identified</td></tr>
-        <tr><td>Volume vs. RevPAR (8 quarters)</td><td>Finance + CoStar</td><td>+37pp structural spread — volume is self-determined, not macro</td></tr>
-        <tr><td>Float-adjusted short interest</td><td>Computer + SEC EDGAR</td><td>38-39% true float short, not 28.8% — Wasatch &amp; Durable net buyers</td></tr>
-        <tr><td>23 comparable M&amp;A transactions</td><td>CB Insights Premium</td><td>57% discount to precedent median — 6.75x vs. 15x sector</td></tr>
-        <tr><td>World Cup DCC model (11 venues)</td><td>Computer + Finance</td><td>$30–45M unmodeled GRLNF — zero in consensus</td></tr>
-        <tr><td>Quarterly deleverage waterfall</td><td>Computer</td><td>3.73x → 2.00x in 8 quarters — mechanical, calendar-pinned</td></tr>
-        <tr><td>SEC Form 4 parsing (10 filings)</td><td>Computer + EDGAR</td><td>$63.56 cost basis — founder well above market, buying again</td></tr>
-        <tr><td>Gateway conversion model</td><td>Finance + Computer</td><td>$141M incremental GRLNF from existing base — zero M&amp;A required</td></tr>
-      </tbody>
-    </table>
-
-    <div class="ps-yellow reveal">
-      <p>Baseline research produces a DCF and a comp table. Perplexity produced the sentiment ratio, the volume/RevPAR spread, the float decomposition, and the conviction-holder 13G/A analysis &mdash; none of which are in any sell-side note.</p>
+    <h3 style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ps-blue);margin:1.5rem 0 0.5rem;">Perplexity Finance &mdash; Live Market and Consensus Data</h3>
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>#</th><th>Task</th><th>Output</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Real-time price, market cap, 52-week range</td><td>$42.16 entry, $40.60 / $108.50 range confirmed</td></tr>
+          <tr><td>2</td><td>FY2026&ndash;FY2028 consensus estimates</td><td>EBITDA $1.185B, FCF $548.8M / $683.9M anchoring the model</td></tr>
+          <tr><td>3</td><td>Quarterly GRLNF and E2E volume, Q1 2022 &ndash; Q4 2025</td><td>16-quarter volume dataset for structural growth analysis</td></tr>
+          <tr><td style="color:var(--ps-green);font-weight:700;">4</td><td style="color:var(--ps-green);font-weight:700;">Volume data cross-referenced against STR/CoStar hotel RevPAR &mdash; 8 consecutive quarters</td><td style="color:var(--ps-green);font-weight:700;">37-percentage-point structural spread confirmed. Not in any sell-side note.</td></tr>
+          <tr><td>5</td><td>Earnings call transcripts, Q1 2024 &ndash; Q4 2025</td><td>~400,000 words of management commentary for sentiment analysis</td></tr>
+          <tr><td>6</td><td>Wall Street analyst price targets (26 analysts)</td><td>Median $65&ndash;70 (12-month); Raymond James, BTIG, Goldman Sachs sourced</td></tr>
+        </tbody>
+      </table>
     </div>
 
+    <h3 style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ps-blue);margin:1.5rem 0 0.5rem;">Perplexity Computer &mdash; Original Analysis</h3>
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>#</th><th>Task</th><th>Output</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--ps-green);font-weight:700;">7</td><td style="color:var(--ps-green);font-weight:700;">Confidence/Caution language ratio &mdash; 8 transcripts, 400,000+ words classified by quarter</td><td style="color:var(--ps-green);font-weight:700;">CEO tone collapse (4.0&times; &rarr; 0.5&times;) while EBITDA margins held 49%. Market priced tone as fundamentals. Not in any sell-side note.</td></tr>
+          <tr><td>8</td><td>SEC Form 4 parsing &mdash; 10 Isaacman purchases via SEC EDGAR</td><td>$63.56 weighted average cost basis reconstructed. $4M purchase March 2026 confirmed.</td></tr>
+          <tr><td style="color:var(--ps-green);font-weight:700;">9</td><td style="color:var(--ps-green);font-weight:700;">13G/A filing cross-reference &mdash; Wasatch (Jan 7 2026) and Durable Capital (Feb 17 2026)</td><td style="color:var(--ps-green);font-weight:700;">Both added Q4 2025. Top 3 holders = 54% of Class A, all net buyers. Float squeeze math confirmed.</td></tr>
+          <tr><td style="color:var(--ps-green);font-weight:700;">10</td><td style="color:var(--ps-green);font-weight:700;">Float-adjusted short interest &mdash; NYSE data vs. Fintel Capital IQ float (46.2M shares)</td><td style="color:var(--ps-green);font-weight:700;">38&ndash;39% true float short vs. 28.8% headline. Not in any sell-side note.</td></tr>
+          <tr><td>11</td><td>Competitive displacement verification &mdash; Fiserv Q3 2025, GPN Q4 2025, Shift4 Q4 2025 letter</td><td>Wynn, KSL Resorts (40 properties), US Bank Stadium, PGA Tour, Fenway, Coors Field confirmed</td></tr>
+          <tr><td>12</td><td>CEO podcast extraction &mdash; Taylor Lauber (31 min, March 2026) via auto-captions</td><td>Strategic commentary on international expansion and unified commerce not in earnings calls</td></tr>
+          <tr><td>13</td><td>World Cup DCC model &mdash; all 11 US venues, bottom-up</td><td>$30&ndash;$45M incremental GRLNF. In zero consensus estimates.</td></tr>
+          <tr><td>14</td><td>Quarterly deleverage waterfall &mdash; Q4 2025A through Q4 2027E</td><td>3.73&times; &rarr; 2.00&times; in 8 quarters, quarter by quarter, with cash and FCF traced</td></tr>
+          <tr><td>15</td><td>Gateway conversion model &mdash; $150B gateway volume, 3 scenarios</td><td>$141M incremental GRLNF base case from existing merchant base at zero M&amp;A cost</td></tr>
+          <tr><td>16</td><td>Global Blue cross-sell model &mdash; 70K SMB merchants</td><td>$87M incremental EBITDA base case by YE2027. Zero in FY2026 guidance.</td></tr>
+          <tr><td>17</td><td>Worldline/Bambora pipeline model &mdash; 280K unmodeled merchants</td><td>$250M+ unmodeled GRLNF from recent acquisitions not yet in backlog</td></tr>
+          <tr><td>18</td><td>Adyen EV/EBITDA verification (current vs. historical)</td><td>12&ndash;15&times; today vs. 35&times; historical; DCC/TFS capability gap confirmed for Bears rebuttal</td></tr>
+          <tr><td>19</td><td>Organic growth decomposition &mdash; Picolinie Capital, management disclosures</td><td>23% organic FY2025 ex-M&amp;A, 18% Q3 2025, mid-teens FY2026 Americas guide</td></tr>
+          <tr><td>20</td><td>25-cell DCF sensitivity matrix &mdash; 5 WACC &times; 5 terminal growth scenarios</td><td>All 25 cells imply upside. Bear floor $91. Base $149. Bull $294.</td></tr>
+          <tr><td>21</td><td>Probability-weighted valuation</td><td>25% bear / 50% base / 25% bull &rarr; $171 probability-weighted value, 4.0&times; expected MOIC</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <p class="ps-source reveal">Source: Perplexity Computer, Perplexity Finance, CB Insights, PitchBook, Statista, SEC EDGAR</p>
+    <h3 style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ps-blue);margin:1.5rem 0 0.5rem;">Premium Databases via Perplexity</h3>
+    <div class="data-table-wrapper reveal">
+      <table class="data-table">
+        <thead><tr><th>#</th><th>Source</th><th>Task</th><th>Output</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--ps-green);font-weight:700;">22</td><td style="color:var(--ps-green);font-weight:700;">CB Insights</td><td style="color:var(--ps-green);font-weight:700;">23 comparable payments M&amp;A transactions since 2019</td><td style="color:var(--ps-green);font-weight:700;">Median 15&times; EV/EBITDA. FOUR at 57% discount to sector precedent. Not in any sell-side note.</td></tr>
+          <tr><td>23</td><td>PitchBook</td><td>IPO valuation benchmarking</td><td>$1.85B post-money on $737M revenue (June 2020) &mdash; same equity value today on 4&times; the business</td></tr>
+          <tr><td>24</td><td>Statista / Dataintelo</td><td>TAM by vertical &mdash; hotels, stadiums, duty-free, intl. hospitality</td><td>$2T+ total addressable market; each sub-market sized with primary source citations</td></tr>
+          <tr><td>25</td><td>JLL / Tri-Link FTZ</td><td>Global hotel investment and duty-free market sizing</td><td>$57.3B hotel investment (JLL 2025); $46.7B duty-free (Tri-Link 2025)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ps-yellow reveal">
+      <p>Baseline research produces a DCF and a comp table. Perplexity produced the sentiment ratio, the volume/RevPAR spread, the float decomposition, and the 13G/A conviction-holder analysis &mdash; none of which appear in any sell-side note covering FOUR.</p>
+    </div>
+
+    <p class="ps-source reveal">Source: Perplexity Computer, Perplexity Finance, CB Insights, PitchBook, Statista, SEC EDGAR, STR/CoStar, JLL, Fintel</p>
   </div>
 </section>
 
